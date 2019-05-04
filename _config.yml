@@ -3,3 +3,5 @@ url: https://docs.devsoap.com
 baseurl: /
 name: Devsoap Docs
 description: Developer documentation for Devsoap products
+plugins: 
+  - jekyll-menus
