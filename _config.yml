@@ -4,10 +4,10 @@ baseurl:
 name: Devsoap Docs
 description: Developer documentation for Devsoap products
 collections_dir: docs
-#collections:
+collections:
 #  fn_gradle_plugin:
 #    output: true
 #    title: FN Gradle Plugin
-#  vaadin_flow_gradle_plugin:
-#    output: true
-#    title: Gradle Vaadin Flow Plugin
+  vaadin_flow_gradle_plugin:
+    output: true
+    title: Gradle Vaadin Flow Plugin
