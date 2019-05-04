@@ -5,4 +5,25 @@
 
 /* Add styles here */
 
+$body-color: #cbeafb;
+$menu-background-color: desaturate(darken($body-color, 5%), 100%);
+$menu-color: darken($menu-background-color, 40%);
+
+aside {
+   padding-top:10px !important;
+   background: $menu-background-color;
+   width: 400px;
+   & > ul {
+     list-style: none;
+     a {
+        color:$menu-color;
+        margin:10px; 
+     }
+   }
+}
+
+
+main.outer {
+   padding:0;
+}
 
