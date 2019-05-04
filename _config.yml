@@ -1,5 +1,5 @@
 theme: jekyll-theme-slate
 url: https://docs.devsoap.com
-baseurl: /docs
+baseurl: /
 name: Devsoap Docs
 description: Developer documentation for Devsoap products
