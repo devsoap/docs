@@ -33,3 +33,22 @@ _vaadin_flow_gradle_plugin/
 
 0 directories, 2 files
 ```
+
+The index.md content will be displayed when the menu is selected.
+
+
+### Content articles
+
+All content is written in Markdown and converted to HTML by Jekyll.
+
+All articles should start with the following content:
+
+```
+---
+layout: default
+---
+
+# Title of article
+```
+
+That will make the article use the default layer as well as the main title will be displed in the navigation menu.
