@@ -1,0 +1,51 @@
+---
+
+---
+
+@import "{{ site.theme }}"; 
+
+/*******************************************************************************
+Custom Styles
+*******************************************************************************/
+
+$body-color: #cbeafb;
+$menu-background-color: desaturate(darken($body-color, 5%), 100%);
+$menu-color: darken($menu-background-color, 50%);
+
+aside {
+   padding-top:10px !important;
+   background: $menu-background-color;
+   width: 400px;
+   & ul {
+     list-style: none;
+     a {
+        color:$menu-color;
+        margin:10px; 
+     }
+
+     li.menu {
+        font-weight: bold;
+
+         & >  a::after {
+            float: right;
+            content: '◂'
+         }
+
+         &.open > a::after {
+            float: right;
+            content: '▾'
+         }
+     }
+
+     li.submenu {
+        font-weight: normal;
+        border-left: 1px solid $menu-color;
+     }
+   }
+}
+
+
+.site-main.outer {
+   padding:0;
+}
+
