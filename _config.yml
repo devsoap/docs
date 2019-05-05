@@ -1,13 +1,13 @@
 theme: jekyll-theme-slate
 url: https://docs.devsoap.com
-baseurl: /
+baseurl:
 name: Devsoap Docs
 description: Developer documentation for Devsoap products
 collections_dir: docs
-collections:
-  fn_gradle_plugin:
-    output: true
-    title: FN Gradle Plugin
-  vaadin_flow_gradle_plugin:
-    output: true
-    title: Gradle Vaadin Flow Plugin
+#collections:
+#  fn_gradle_plugin:
+#    output: true
+#    title: FN Gradle Plugin
+#  vaadin_flow_gradle_plugin:
+#    output: true
+#    title: Gradle Vaadin Flow Plugin

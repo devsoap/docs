@@ -9,16 +9,44 @@
   <link rel="stylesheet" type="text/css" media="screen" href="{{ '/assets/css/theme.css?v=' | append: site.github.build_revision | relative_url }}">
   <link rel="stylesheet" type="text/css" mdeia="screen" href="//devsoap.com/assets/built/global.css">
   <link rel="stylesheet" type="text/css" media="screen" href="//devsoap.com/assets/built/screen.css">
-
+  <script type="text/javascript" src="//devsoap.com/assets/js/jquery-3.2.1.min.js?v=9dbc70bc6b"></script>
   <script type="text/javascript">
+    
     function showSubmenu(id) {
+
       var menus = document.getElementsByClassName("side-nav-submenu");
       for(var i; i< menus.length; i++) {
         menus[i].style.display = 'none';
         menus[i].parentNode.classList.remove('open');
       }
-      document.getElementById(id).style.display = 'block';
-      document.getElementById(id).parentNode.classList.add('open');
+      
+      var currentMenu = document.getElementById(id)
+      if(currentMenu != null) {
+        currentMenu.style.display = 'block';
+        currentMenu.parentNode.classList.add('open');
+      }
+    }
+
+    function analytics() {
+      var host = document.location.host
+      if(host.startsWith("localhost") || host.startsWith("127")) {
+        console.log("Omitted sending analytics event when running on localhost");
+        return;
+      }
+
+      var request = {
+          host: document.location.host,
+          ctx: window.location.pathname,
+          url: window.location.href
+      };
+
+      $.ajax({
+          type: "POST",
+          url: "https://hits.devsoap.com/hit",
+          contentType: "application/json",
+          data: JSON.stringify(request),
+          crossDomain: true,
+      });
     }
   </script>
 </head>
@@ -98,6 +126,9 @@
   <script>
     var submenu = window.location.pathname.split('/')[1];
     showSubmenu('side-nav-' + submenu);  
+  </script>
+  <script>
+    analytics();
   </script>
 </body>
 
