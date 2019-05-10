@@ -1,0 +1,25 @@
+{% for collection in menus %}
+    {% assign threadClass = threadClass | default: collection.label %}
+    <li class="menu" role="menuitem">
+        <a href="/{{ collection.label }}" title="Go to {{ collection.title }}">{{ collection.title }}</a>
+    </li>
+    <li>
+        <ol class="side-nav-submenu {{rootMenuClass}}" id="side-nav-{{ collection.label }}">
+            {% for doc in collection.docs %}
+                {% if doc.title != 'Index' %}
+                    <li class="submenu submenu" role="menuitem">
+                        <a href="{{ doc.url }}" title="Go to {{ doc.title }}">{{ doc.title }}</a>
+                    </li>
+                {% endif %}        
+            {% endfor %}
+
+            {% assign menus = site.collections | where: "parent", collection.label %}
+            {% assign rootMenuClass = '' %}
+            {% if menus != empty %} 
+                <li class="submenu submenu" role="menuitem">
+                    {% include menu.html %}
+                </li>
+            {% endif %}
+        </ol>
+    </li>    
+{% endfor %}

@@ -15,32 +15,37 @@ $menu-color: darken($menu-background-color, 50%);
 aside {
    padding-top:10px !important;
    background: $menu-background-color;
-   width: 400px;
-   & ul {
+   width: 500px;
+   padding-right:20px !important;
+   & ol {
      list-style: none;
+     padding-right: 0;
      a {
         color:$menu-color;
         margin:10px; 
      }
 
+     li {
+        margin: 0;
+     }
+
      li.menu {
         font-weight: bold;
-
-         & >  a::after {
-            float: right;
-            content: '◂'
-         }
-
-         &.open > a::after {
-            float: right;
-            content: '▾'
-         }
      }
 
-     li.submenu {
-        font-weight: normal;
+     li.submenu, .side-nav-submenu > .menu {
         border-left: 1px solid $menu-color;
      }
+   }
+
+   & > ol.open > li.menu > a::after {
+      float: right;
+      content: '▾'
+     }
+
+   & > ol > li.menu > a::after {
+      float: right;
+      content: '◂'
    }
 }
 
