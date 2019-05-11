@@ -1,0 +1,13 @@
+vaadin_plugin:
+    version: 1.2
+    title: "[Devsoap Vaadin Flow Gradle Plugin](https://devsoap.com/gradle-vaadin-flow-plugin)"
+    creator_tasks:
+        - vaadinCreateProject
+        - vaadinCreateWebComponent
+        - vaadinCreateWebTemplate
+        - vaadinCreateComponent
+        - vaadinCreateComposite
+
+groovy_plugin:
+    title: "[Gradle Groovy Plugin](https://docs.gradle.org/current/userguide/groovy_plugin.html)"
+   
