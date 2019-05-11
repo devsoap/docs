@@ -1,7 +1,6 @@
 {% for collection in menus %}
-    {% assign threadClass = threadClass | default: collection.label %}
     <li class="menu" role="menuitem">
-        <a href="/{{ collection.label }}" title="Go to {{ collection.title }}">{{ collection.title }}</a>
+        <a  href="/{{ collection.label }}" title="Go to {{ collection.title }}">{{ collection.title }}</a>
     </li>
     <li>
         <ol class="side-nav-submenu {{rootMenuClass}}" id="side-nav-{{ collection.label }}">

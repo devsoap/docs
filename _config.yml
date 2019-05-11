@@ -4,6 +4,18 @@ baseurl:
 name: Devsoap Docs
 title: Devsoap Docs
 description: Developer documentation for Devsoap products
+markdown: kramdown
+highlighter: rouge
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    css_class: 'highlight'
+    span:
+      line_numbers: false
+    block:
+      line_numbers: true
+      start_line: 1
 collections_dir: docs
 collections:
   vaadin_flow_gradle_plugin:

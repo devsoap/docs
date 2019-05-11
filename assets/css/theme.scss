@@ -2,7 +2,7 @@
 
 ---
 
-@import "{{ site.theme }}"; 
+@import "monokai.css";
 
 /*******************************************************************************
 Custom Styles
@@ -11,11 +11,12 @@ Custom Styles
 $body-color: #cbeafb;
 $menu-background-color: desaturate(darken($body-color, 5%), 100%);
 $menu-color: darken($menu-background-color, 50%);
+$menu-selected-color: #26a8ed;
 
 aside {
    padding-top:10px !important;
    background: $menu-background-color;
-   width: 500px;
+   width: 300px;
    padding-right:20px !important;
    & ol {
      list-style: none;
@@ -49,8 +50,46 @@ aside {
    }
 }
 
-
 .site-main.outer {
    padding:0;
 }
 
+.inner {
+   padding-top: 1em;
+}
+
+.highlighter-rouge {
+   margin-bottom: 1em;  
+   background-color: lightgray;
+   padding: 3px;
+
+   .highlight pre {
+      background-color: lighten(black, 20%);
+      padding: 10px;
+   }
+  
+   .lineno { 
+      color: #ccc; 
+      padding-right: 10px;
+      padding-left: 10px;
+    }
+}
+
+.language-bash {
+   color: lighten(green, 20%);
+
+   & .rouge-code > pre::before {
+      content: '$> ';
+      color: white;
+   }
+}
+
+pre > a {
+   display: inline;
+   padding: 0;
+   margin: 0;
+   overflow: hidden;
+   text-overflow: ellipsis;
+   white-space: nowrap;
+
+}
