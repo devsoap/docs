@@ -6,7 +6,7 @@
     <main id="site-main" class="site-main outer" role="main" style="display:flex;flex-grow:1">
       <aside>
         <ol class="side-nav" role="menu" style="height:50px">
-          {% assign menus = site.collections | where: "parent", 'main' %}
+          {% assign menus = site.collections | where: "parent", 'main' | sort: 'priority' %}
           {% assign rootMenuClass = 'root-menu' %}
           {% include menu.html %}
         </ol>

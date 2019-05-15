@@ -14,13 +14,13 @@ $menu-color: darken($menu-background-color, 50%);
 $menu-selected-color: #26a8ed;
 
 aside {
-   padding-top:10px !important;
    background: $menu-background-color;
    width: 450px;
-   padding-right:20px !important;
+
    & ol {
      list-style: none;
      padding-right: 0;
+  
      a {
         color:$menu-color;
         margin:10px; 
@@ -28,16 +28,13 @@ aside {
 
      li {
         margin: 0;
+        &.menu {
+         font-weight: bold;  
+        }
+        &.submenu {
+         font-weight: normal;
+        }
      }
-
-     li.menu {
-        font-weight: bold;
-     }
-/*
-     li.submenu, .side-nav-submenu > .menu {
-        border-left: 1px solid $menu-color;
-     }
-*/
    }
 
    & > ol.open > li.menu > a::after {
@@ -45,9 +42,26 @@ aside {
       content: '▾'
      }
 
-   & > ol > li.menu > a::after {
-      float: right;
-      content: '◂'
+
+   & > ol {
+      padding-left:0;
+      & > li.menu {
+         padding-left:0;
+         & > a {
+            padding-left: 5px;
+            margin:0;
+            width: 100%;
+            display: inline-block;
+            line-height: 2em;
+            background: lighten($menu-background-color, 10%);
+         }
+
+         & > a::after {
+            float: right;
+            padding-right: 10px;
+            content: '◂'
+         }
+      }
    }
 }
 

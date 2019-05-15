@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Create a new project
+title: Create a new Groovy project
 ---
 
 # {{ page.title }}

@@ -1,9 +1,8 @@
 ---
 layout: default
-title: Themes and styles
 ---
 
-# {{ page.title }}
+# Themes and styles
 
 Even though a Vaadin project will look good without changing the defaults in many cases you will
 want to change how the application looks to match your companies brand or your personal taste.

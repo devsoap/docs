@@ -26,15 +26,19 @@ collections:
     output: true
     title: Java
     parent: vaadin_flow_gradle_plugin
+    priority: 1
   vaadin_flow_gradle_plugin_groovy:
     output: true
     title: Groovy
     parent: vaadin_flow_gradle_plugin
+    priority: 2
   vaadin_flow_gradle_plugin_javascript:
     output: true
     title: Javascript and Web Components
     parent: vaadin_flow_gradle_plugin
+    priority: 3
   vaadin_flow_gradle_plugin_themes:
     output: true
     title: Themes and styles
     parent: vaadin_flow_gradle_plugin
+    priority: 4

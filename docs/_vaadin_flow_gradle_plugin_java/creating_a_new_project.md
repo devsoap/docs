@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Create a new project
+title: Create a new Java project
 ---
 
 # {{ page.title }}
