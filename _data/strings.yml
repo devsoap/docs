@@ -1,6 +1,6 @@
 vaadin_plugin:
     version: 1.2
-    title: "[Devsoap Vaadin Flow Gradle Plugin](https://devsoap.com/gradle-vaadin-flow-plugin)"
+    title: "[DS Vaadin Flow Gradle Plugin](https://devsoap.com/gradle-vaadin-flow-plugin)"
     creator_tasks:
         - vaadinCreateProject
         - vaadinCreateWebComponent
@@ -10,4 +10,9 @@ vaadin_plugin:
 
 groovy_plugin:
     title: "[Gradle Groovy Plugin](https://docs.gradle.org/current/userguide/groovy_plugin.html)"
-   
+
+war_plugin:
+    title: "[Gradle WAR Plugin](https://docs.gradle.org/current/userguide/war_plugin.html)"
+
+java_plugin:
+    title: "[Gradle Java Plugin](https://docs.gradle.org/current/userguide/java_plugin.html)"

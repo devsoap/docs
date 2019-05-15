@@ -5,28 +5,28 @@ title: Create a new project
 
 # {{ page.title }}
 
-The {{ site.data.strings["vaadin_plugin"].title }} supports Groovy project out-of-the-box and integrates seamlessly with the {{ site.data.strings["groovy_plugin"].title }}.
+The {{ site.data.strings["vaadin_plugin"].title }} supports Java project out-of-the-box and integrates seamlessly 
+with both the {{ site.data.strings["java_plugin"].title }} and the {{ site.data.strings["war_plugin"].title }}.
 
 ## Creating the initial build.gradle configuration
 
-To create a new project you will need the following *build.gradle* file:
+To create a new Java project you will need the following *build.gradle* file:
 
 #### build.gradle
 
 ```gradle
 plugins {
-    id 'groovy'
     id 'com.devsoap.vaadin-flow' version '{{ site.data.strings["vaadin_plugin"].version }}'
 }
 ```
 
-On **line 1** we are are defining the *plugins* block. The plugins block defines what plugins will be applied to the project. In this case we are interested in two plugins; the groovy plugin and the Vaadin Flow gradle plugin.
+On **line 1** we are are defining the *plugins* block. The plugins block defines what plugins will be applied to the project. 
 
-On **line 2** we add the {{ site.data.strings["groovy_plugin"].title }} which will configure the project to allow adding Groovy source code to *src/main/groovy* and add the necessery compiler dependencies. The Vaadin plugin will also use this plugin to determine that this project in fact is a Groovy project and configure the code generation accordingly.
+On **line 2** we include the {{ site.data.strings["vaadin_plugin"].title }} which will provide us with all the necessery 
+Vaadin tasks and configurations for us to build a Vaadin application.
 
-On **line 3** we include the {{ site.data.strings["vaadin_plugin"].title }} which will provide us with all the necessery Vaadin tasks and configurations for us to build a Vaadin application.
-
-But adding the plugins is not yet enough for us to have a working Groovy project, we also will need to add the necessery dependencies and repositories for the project to build. We can do that by using the convenient ``vaadin.autoconfigure()`` helper method the {{ site.data.strings["vaadin_plugin"].title }} provides.
+That is all we need, the {{ site.data.strings["vaadin_plugin"].title }} will automatically apply the 
+{{ site.data.strings["java_plugin"].title }} to the project, we don't need to do it here.
 
 #### build.gradle
 
@@ -41,7 +41,7 @@ vaadin.autoconfigure()
 #### build.gradle
 
 ```gradle
-// Manually defining the Vaadin dependencies for a Groovy project
+// Manually defining the Vaadin dependencies for a Java project
 repositories {
     vaadin.repositories()
 }
@@ -51,16 +51,13 @@ dependencies {
     vaadin.core()
     vaadin.lumoTheme()
     vaadin.slf4j()
-    vaadin.groovy()
 }
 ```
 > <p> On <b>line 3</b> all the required repositories are added. The plugin provides a nice helper for you so you don't have to remember any of the Vaadin repository urls. </p>
 > <p> On <b>line 7</b> we add the Vaadin BOM dependency. The BOM dependency locks down all transitive dependency versions to versions of the dependencies that are compatible with eachother. This is important since once you start adding addons that might depend on conflicting versions it could otherwise brake.</p> 
 > <p> On <b>line 8</b> we add the Vaadin Flow Core framework. These include all the framework code as well as all Open Source dependencies.</p> 
 > <p> On <b>line 9</b> we add a dependency to the Lumo base theme which will define how our UI will look like.</p> 
-> <p> On <b>line 10</b> we add a Logging implementation. This is optional and if you wish you could switch it out to another Logging implementation.</p> 
-> <p> On <b>line 11</b> we add a compatible Groovy dependency. You can also use your own Groovy version, but the one provided by the plugin has been pre-tested.</p> 
-
+> <p> On <b>line 10</b> we add a Logging implementation. This is optional and if you wish you could switch it out to another Logging implementation.</p>
 
 ## Creating application stubs
 
@@ -85,10 +82,10 @@ Once you have run that task you should see the following folder structure:
 ├── build.gradle
 └── src
     └── main
-        ├── groovy
+        ├── java
         │   └── com
         │       └── example
-        │           ├── {{ "[MyProjectServlet.groovy](#myprojectservletgroovy)" | markdownify | remove: "<p>" | remove: "</p>"}}        │           ├── {{ "[MyProjectUI.groovy](#myprojectuigroovy)" | markdownify | remove: "<p>" | remove: "</p>"}}        │           └── {{ "[MyProjectView.groovy](#myprojectviewgroovy)" | markdownify | remove: "<p>" | remove: "</p>"}}        └── webapp
+        │           ├── {{ "[MyProjectServlet.java](#myprojectservletjava)" | markdownify | remove: "<p>" | remove: "</p>"}}        │           ├── {{ "[MyProjectUI.java](#myprojectuijava)" | markdownify | remove: "<p>" | remove: "</p>"}}        │           └── {{ "[MyProjectView.java](#myprojectviewjava)" | markdownify | remove: "<p>" | remove: "</p>"}}        └── webapp
             └── frontend
                 └── styles
                     └── {{ "[myproject-theme.css](#myprojectthemecss)" | markdownify | remove: "<p>" | remove: "</p>" }}
@@ -98,18 +95,18 @@ Once you have run that task you should see the following folder structure:
 <br>
 Lets have a look at the created files one-by-one.
 
-#### MyProjectServlet.groovy
+#### MyProjectServlet.java
 
-```groovy
-package com.example
+```java
+package com.example;
 
-import com.vaadin.flow.server.VaadinServlet
-import com.vaadin.flow.server.VaadinServletConfiguration
-import javax.servlet.annotation.WebServlet
+import com.vaadin.flow.server.VaadinServlet;
+import com.vaadin.flow.server.VaadinServletConfiguration;
+import javax.servlet.annotation.WebServlet;
 
 @WebServlet(urlPatterns = '/*', name = 'MyProjectServlet', asyncSupported = true)
 @VaadinServletConfiguration(ui = MyProjectUI, productionMode = false)
-class MyProjectServlet extends VaadinServlet { }
+public class MyProjectServlet extends VaadinServlet { }
 ```
 
 As the name of the file describes, the Servlet class will configure our Vaadin Flow servlet. In this class we do not need to implement or override anything, everything is configured using annotations.
@@ -123,19 +120,19 @@ As the name of the file describes, the Servlet class will configure our Vaadin F
 All Vaadin Flow application servlets should extend the [``VaadinServlet``](https://vaadin.com/api/platform/com/vaadin/flow/server/VaadinServlet.html). The [``VaadinServlet``](https://vaadin.com/api/platform/com/vaadin/flow/server/VaadinServlet.html) is a standard Java servlet with Vaadin specific implementation for handling HTTP requests.
 
 
-#### MyProjectUI.groovy
+#### MyProjectUI.java
 
-```groovy
-package com.example
+```java
+package com.example;
 
-import com.vaadin.flow.component.dependency.HtmlImport
-import com.vaadin.flow.component.UI
-import com.vaadin.flow.theme.lumo.Lumo
-import com.vaadin.flow.theme.Theme
+import com.vaadin.flow.component.dependency.HtmlImport;
+import com.vaadin.flow.component.UI;
+import com.vaadin.flow.theme.lumo.Lumo;
+import com.vaadin.flow.theme.Theme;
 
 @HtmlImport("frontend://styles/myproject-theme.html")
 @Theme(Lumo)
-class MyProjectUI extends UI { }
+public class MyProjectUI extends UI { }
 
 ```
 
@@ -148,17 +145,17 @@ For example, if you want to get the request parameters you can override the ``in
 In some cases, for instance when using [Spring Boot](https://spring.io/projects/spring-boot), no [``UI``](https://vaadin.com/api/platform/com/vaadin/flow/component/UI.html) instance is required.
 
 
-#### MyProjectView.groovy
+#### MyProjectView.java
 
-```groovy
-package com.example
+```java
+package com.example;
 
-import com.vaadin.flow.component.button.Button
-import com.vaadin.flow.component.html.Label
-import com.vaadin.flow.component.orderedlayout.VerticalLayout
-import com.vaadin.flow.component.page.BodySize
-import com.vaadin.flow.component.page.Viewport
-import com.vaadin.flow.router.Route
+import com.vaadin.flow.component.button.Button;
+import com.vaadin.flow.component.html.Label;
+import com.vaadin.flow.component.orderedlayout.VerticalLayout;
+import com.vaadin.flow.component.page.BodySize;
+import com.vaadin.flow.component.page.Viewport;
+import com.vaadin.flow.router.Route;
 
 @Route('')
 @BodySize(height = '100vh', width = '100vw')
@@ -169,7 +166,7 @@ class MyProjectView extends VerticalLayout {
 
         className = 'app-view'
 
-        add new Label('Hello Groovy app!')
+        add new Label('Hello Java app!')
 
         add new Button('Click me!', { event ->
              event.source.with {
@@ -201,7 +198,7 @@ label { color: green; }
 label.clicked { color: red; }⏎    
 ```
 
-A CSS theme file for the application is also created for your convenience. The theme file is by default imported in [MyProjectUI.groovy](#myprojectuigroovy).
+A CSS theme file for the application is also created for your convenience. The theme file is by default imported in [MyProjectUI.java](#myprojectuijava).
 
 > <b>How can a CSS file work HTML imports?</b> <br>
 >By default any CSS file placed in */webapp/frontend/styles* will automatically be wrapped in a HTML wrapper. That is why we can simply use CSS files and not always wrap the css in a HTML file that is done in many Maven project examples. IF you want to have a look at how the HTML wrappers will look like then look into **/build/webapp-gen/frontend/styles** where the generated will exist.

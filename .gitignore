@@ -1,5 +1,6 @@
+.idea
 .bundle
 Gemfile.lock
 _site
-vendor
+.vendor
 .jekyll-metadata

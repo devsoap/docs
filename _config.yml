@@ -22,7 +22,19 @@ collections:
     output: true
     title: DS Vaadin Flow Gradle Plugin
     parent: main
+  vaadin_flow_gradle_plugin_java:
+    output: true
+    title: Java
+    parent: vaadin_flow_gradle_plugin
   vaadin_flow_gradle_plugin_groovy:
     output: true
     title: Groovy
+    parent: vaadin_flow_gradle_plugin
+  vaadin_flow_gradle_plugin_javascript:
+    output: true
+    title: Javascript and Web Components
+    parent: vaadin_flow_gradle_plugin
+  vaadin_flow_gradle_plugin_themes:
+    output: true
+    title: Themes and styles
     parent: vaadin_flow_gradle_plugin

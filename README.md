@@ -3,7 +3,16 @@
 This repository contains the content of https://docs.devsoap.com.
 
 
+
+
 ## Development
+
+To install the required dependencies:
+```
+sudo apt install ruby-bundler ruby-dev
+
+bundle install --path .vendor/bundle
+```
 
 To run the site:
 

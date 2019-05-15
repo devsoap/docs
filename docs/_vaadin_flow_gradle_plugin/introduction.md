@@ -1,8 +1,9 @@
 ---
 layout: default
+title: Introduction
 ---
 
-# Introduction
+# {{ page.title }}
 
 The DS Vaadin Flow Gradle plugin allows you to build your Vaadin projects leveraging the Gradle build tool. 
 
