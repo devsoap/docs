@@ -20,6 +20,13 @@ To run the site:
 bundle exec jekyll serve --incremental
 ```
 
+Enable the GIT hooks:
+
+```
+git config core.hooksPath hooks
+```
+
+
 ## Content
 
 ### Adding a main menu
