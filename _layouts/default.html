@@ -12,6 +12,9 @@
         </ol>
       </aside>
       <div class="inner">
+        <div class="last-modifed" title="Last modified">
+          {{page.date | date_to_string: "ordinal", "US" }}
+        </div>
         {{ content }}
       </div>
     </main>

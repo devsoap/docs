@@ -16,3 +16,11 @@ war_plugin:
 
 java_plugin:
     title: "[Gradle Java Plugin](https://docs.gradle.org/current/userguide/java_plugin.html)"
+
+sass_plugin:
+    version: 3.5.1
+    title: "[SASS Plugin](https://github.com/freefair/gradle-plugins/tree/master/jsass-plugin)"
+
+
+
+    

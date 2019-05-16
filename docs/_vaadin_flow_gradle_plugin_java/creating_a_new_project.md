@@ -105,7 +105,7 @@ import com.vaadin.flow.server.VaadinServletConfiguration;
 import javax.servlet.annotation.WebServlet;
 
 @WebServlet(urlPatterns = '/*', name = 'MyProjectServlet', asyncSupported = true)
-@VaadinServletConfiguration(ui = MyProjectUI, productionMode = false)
+@VaadinServletConfiguration(ui = MyProjectUI.class, productionMode = false)
 public class MyProjectServlet extends VaadinServlet { }
 ```
 
@@ -131,7 +131,7 @@ import com.vaadin.flow.theme.lumo.Lumo;
 import com.vaadin.flow.theme.Theme;
 
 @HtmlImport("frontend://styles/myproject-theme.html")
-@Theme(Lumo)
+@Theme(Lumo.class)
 public class MyProjectUI extends UI { }
 
 ```
