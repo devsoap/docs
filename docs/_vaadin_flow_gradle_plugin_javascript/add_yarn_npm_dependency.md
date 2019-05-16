@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Adding a Javascript dependency
+modified: '2019-05-16 20:26:57 +0300'
 ---
 
 # {{ page.title }}

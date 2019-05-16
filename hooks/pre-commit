@@ -30,5 +30,6 @@ fully_staged_files=`echo "$staged_and_partially_staged_files" | sort | uniq -u`
 for FILE in $fully_staged_files ; do
     # substitute every jekyll modified timestamp with current timestamp
     sed -i "1,10s/modified:.*/modified: \'$(date +'%Y-%m-%d %H:%M:%S %z')\'/" "$FILE"
+    git add $FILE
 done
 

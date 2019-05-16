@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Using Syntactically Awesome Style Sheets (SASS)
-modified:
+modified: '2019-05-16 20:26:57 +0300'
 priority: 2
 ---
 
@@ -71,5 +71,4 @@ The way this works is that the {{ site.data.strings["vaadin_plugin"].title }} wi
 [SASS](https://sass-lang.com) into CSS and then use the [CSS auto-wrapping feature](css.html#supporting-styling-shadow-dom-with-css-auto-wrapping) to wrap the remaining CSS into HTML.
 
 By using the [CSS auto-wrapping feature](css.html#supporting-styling-shadow-dom-with-css-auto-wrapping) it means you will also be able to style the [Shadow DOM](https://developers.google.com/web/fundamentals/web-components/shadowdom) with SASS.
-
 
