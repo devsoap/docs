@@ -1,7 +1,8 @@
 ---
 layout: default
 title: Introduction
-modified: '2019-05-16 20:26:57 +0300'
+modified: '2019-05-18 18:04:43 +0300'
+priority: 1
 ---
 
 # {{ page.title }}
@@ -13,26 +14,24 @@ interface to build complex Vaadin Flow applications.
 
 The main features include:
 
-  * First class support for Java, Groovy and Kotlin Vaadin projects [todo-link]
-  * Support for using Yarn and Bower for managing Javascript components [todo-link]
-  * Includes project creator tasks for automatically generating stubs for projects, components and themes [todo-link]
-  * Support for theming with CSS and SASS [todo-link]
-  * Production mode support [todo-link]
-  * IDE support for both Intellij IDEA and Eclipse [todo-link]
+  * First class support for Java, Groovy and Kotlin Vaadin projects 
+  * [Support for using Yarn and Bower for managing Javascript components](add_yarn_npm_dependency.html)
+  * Includes project creator tasks for automatically generating stubs for projects, components and themes
+  * [Support for theming with CSS, SASS, Polymer and Groovy](vaadin_flow_gradle_plugin_themes)
+  * Production mode support 
+  * IDE support for both Intellij IDEA and Eclipse
 
 
-The plugin also integrates with many of Gradles optimization features such as:
+The plugin also integrates with many of Gradle's optimization features such as:
 
-  * Gradle Build Cache [todo-link]
-  * Gradle Parallel Execution [todo-link]
-  * Gradle Offline mode [todo-link]
-  * Long running Gradle Deamon builds [todo-link]
-
+  * [Gradle Build Cache](offline_and_caching.html#gradle-build-cache)
+  * [Gradle Parallel Execution](offline_and_caching.html#gradle-parallel-task-execution)
+  * [Gradle Offline mode](offline_and_caching.html#gradle-offline-mode)
 
 Furthermore, the plugin provides advanced Javascript features such as:
 
-  * Offline mirroring for Javascript components [todo-link]
-  * Transpilation for older browsers (IE11) [todo-link]
+  * [Offline mirroring for Javascript components](offline_and_caching.html#production-mode-offline-mode)
+  * Transpilation for older browsers (IE11)
 
 
 The plugin also tries to support most of the features the Vaadin Maven Flow plugin does. However, it does not guarantee that all features are implementated or that they are implemented in the same way.
@@ -43,4 +42,3 @@ The plugin also tries to support most of the features the Vaadin Maven Flow plug
 The source code is Open Source and is licensed under the permissive Apache 2 license. The sources of the plugin can be found in the Github repository at [https://github.com/devsoap/gradle-vaadin-flow].
 
 For more information about how to develop the plugin checkout the [Development Article](todo-link).
-
