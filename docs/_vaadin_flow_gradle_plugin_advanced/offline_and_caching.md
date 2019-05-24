@@ -1,8 +1,7 @@
 ---
 layout: default
 title: Offline mode and Caching
-modified: '2019-05-18 18:05:11 +0300'
-priority: 2 
+modified: '2019-05-24 16:33:08 +0300'
 ---
 
 # {{ page.title }}

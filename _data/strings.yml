@@ -1,6 +1,7 @@
 vaadin_plugin:
     version: 1.2
     framework_version: 13.0.0
+    supported_versions: "[10,11,13,14]"
     title: "[DS Vaadin Flow Gradle Plugin](https://devsoap.com/gradle-vaadin-flow-plugin)"
     creator_tasks:
         - vaadinCreateProject

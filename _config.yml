@@ -27,23 +27,23 @@ collections:
     title: Dependency Management
     parent: vaadin_flow_gradle_plugin
     priority: 1  
-  vaadin_flow_gradle_plugin_java:
+  vaadin_flow_gradle_plugin_tasks:
     output: true
-    title: Java
+    title: Plugin tasks
     parent: vaadin_flow_gradle_plugin
     priority: 2
-  vaadin_flow_gradle_plugin_groovy:
-    output: true
-    title: Groovy
-    parent: vaadin_flow_gradle_plugin
-    priority: 3
   vaadin_flow_gradle_plugin_javascript:
     output: true
     title: Javascript and Web Components
     parent: vaadin_flow_gradle_plugin
-    priority: 4
+    priority: 3
   vaadin_flow_gradle_plugin_themes:
     output: true
     title: Themes and styles
+    parent: vaadin_flow_gradle_plugin
+    priority: 4
+  vaadin_flow_gradle_plugin_advanced:
+    output: true
+    title: Advanced topics
     parent: vaadin_flow_gradle_plugin
     priority: 5

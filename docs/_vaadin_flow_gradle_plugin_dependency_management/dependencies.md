@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Dependencies
-modified: '2019-05-22 18:53:01 +0300'
+modified: '2019-05-24 16:33:08 +0300'
 ---
 
 # {{ page.title }}
@@ -26,6 +26,22 @@ vaadin {
 ```
 
 The version should always be set **before** any dependencies or repositories are added to the project.
+
+When using Vaadin Flow Framework snapshots or pre-releases you might see the following error:
+
+>The Vaadin version (\*\*version X\*\*) you have selected is not supported by the plugin. Please pick one of the following supported Vaadin versions {{ site.data.strings["vaadin_plugin"].supported_versions }}. Alternatively you can add vaadin.unsupportedVersion=true to your build.gradle to override this check but there is no guarantee it will work or that the build will be stable.
+
+This means that the Vaadin version you are trying to use has not yet been properly tested and might break in unforeseeable ways. If you are writing a production application then you should select a version that is supported by the plugin.
+
+However, if you want to temporarily test your application with a unsupported version you can add the following to override the error
+
+#### build.gradle
+```groovy
+vaadin {
+    unsupportedVersion = true
+}
+```
+Just be aware that when you decide to use an unsupported version you are basically on your own. The plugin authors will not be able to help you with any issues that might occur.
 
 
 ## Autoconfiguring dependencies and repositories

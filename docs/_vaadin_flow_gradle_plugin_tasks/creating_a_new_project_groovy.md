@@ -1,7 +1,8 @@
 ---
 layout: default
 title: Create a new Groovy project
-modified: '2019-05-16 20:26:57 +0300'
+modified: '2019-05-24 16:33:08 +0300'
+priority: 2
 ---
 
 # {{ page.title }}
