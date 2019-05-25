@@ -15,6 +15,19 @@
         <div class="last-modifed" title="Last modified">
           {{page.modified | date_to_string: "ordinal", "US" }}
         </div>
+        
+        {% assign collection = site.collections | where: "label", page.collection | first %}
+        {% if collection.parent != 'main' %}
+          {% assign collection = site.collections | where: "label", collection.parent | first %}
+        {% endif %}
+        
+        {% assign title = page.title %}
+        {% if title == 'Index' %}
+          {% assign title = collection.title %}
+        {% endif %}
+
+        <h1><img src='{{collection.logo}}' style='height:1em' /> {{ title}} </h1>
+
         {{ content }}
       </div>
     </main>

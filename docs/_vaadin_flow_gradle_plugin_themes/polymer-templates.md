@@ -2,10 +2,8 @@
 layout: default
 title: Layouts with Polymer HTML Templates
 priority: 3
-modified: '2019-05-17 16:57:40 +0300'
+modified: '2019-05-25 19:37:04 +0300'
 ---
-
-# {{ page.title }}
 
 [Polymer templates](https://polymer-library.polymer-project.org/2.0/docs/devguide/dom-template) allows you to define a custom components structure by using a *declarative* HTML snippet.
 

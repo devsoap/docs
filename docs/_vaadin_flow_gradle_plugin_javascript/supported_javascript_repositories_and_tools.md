@@ -1,10 +1,8 @@
 ---
 layout: default
 title: Supported repositories and tools
-modified: '2019-05-16 20:26:57 +0300'
+modified: '2019-05-25 19:37:04 +0300'
 ---
-
-# {{ page.title }}
 
 By default all the Vaadin components are distributed as WebJars. WebJars are pre-packaged web components that 
 you can add as a standard dependency to your Gradle build.

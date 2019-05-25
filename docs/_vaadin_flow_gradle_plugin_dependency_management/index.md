@@ -1,6 +1,5 @@
 ---
 layout: default
-modified: '2019-05-22 18:53:01 +0300'
+modified: '2019-05-25 19:37:04 +0300'
+title: Dependency Management
 ---
-
-# Dependency Management

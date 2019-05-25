@@ -2,6 +2,7 @@
 
 ---
 
+//@import "{{ site.theme }}";
 @import "monokai.css";
 
 /*******************************************************************************
@@ -71,6 +72,9 @@ aside {
 
 .inner {
    padding-top: 1em;
+   padding-left: 20px;
+   padding-right: 20px;
+   text-align: justify;
 }
 
 .last-modifed {
@@ -121,4 +125,3 @@ pre > a {
    white-space: nowrap;
 
 }
-

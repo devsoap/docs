@@ -1,11 +1,9 @@
 ---
 layout: default
 title: Using Syntactically Awesome Style Sheets (SASS)
-modified: '2019-05-16 20:26:57 +0300'
+modified: '2019-05-25 19:37:04 +0300'
 priority: 2
 ---
-
-# {{ page.title }}
 
 For Vaadin 7 and 8 users using [SASS](https://sass-lang.com) was the default way of styling Vaadin applications. This is no longer the case with Vaadin Flow
 but nevertheless, it is still fully possible to use [SASS](https://sass-lang.com) to style the application.

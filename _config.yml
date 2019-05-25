@@ -21,7 +21,10 @@ collections:
   vaadin_flow_gradle_plugin:
     output: true
     title: DS Vaadin Flow Gradle Plugin
+    description: A Gradle plugin for developing Vaadin 10+ web applications.
     parent: main
+    logo: https://devsoap.com/content/images/2018/10/Gradle_Vaadin_logo_50x44.png
+    header_image: https://devsoap.com/content/images/2018/09/vaadin_post_header.png
   vaadin_flow_gradle_plugin_dependency_management:
     output: true
     title: Dependency Management

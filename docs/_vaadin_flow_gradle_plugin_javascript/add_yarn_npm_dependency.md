@@ -1,10 +1,8 @@
 ---
 layout: default
 title: Adding a Javascript dependency
-modified: '2019-05-16 20:26:57 +0300'
+modified: '2019-05-25 19:37:04 +0300'
 ---
-
-# {{ page.title }}
 
 The plugin supports [3 ways of adding a Javascript dependency](/vaadin_flow_gradle_plugin_javascript), 
 with [Webjars](https://www.webjars.org), [Bower](https://bower.io) or [Yarn](https://yarnpkg.com).

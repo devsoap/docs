@@ -1,9 +1,7 @@
 ---
 layout: default
-modified: '2019-05-16 20:26:57 +0300'
+modified: '2019-05-25 19:37:04 +0300'
 ---
-
-# DS Vaadin Flow Gradle Plugin
 
 Welcome to the DS Vaadin Flow Gradle plugin documentation site. 
 

@@ -1,9 +1,8 @@
 ---
 layout: default
-modified: '2019-05-16 20:26:57 +0300'
+modified: '2019-05-25 19:37:04 +0300'
+title: Javascript and Web Components
 ---
-
-# Javascript and Web Components
 
 One of the biggest changes in Vaadin Flow compared to Vaadin Framework 8 is the change from using Google Web Toolkit (GWT) to
 using web components. For previous Vaadin developers this brings a lot of new terminology to learn and a lot of new Javascript

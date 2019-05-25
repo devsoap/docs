@@ -1,11 +1,9 @@
 ---
 layout: default
 title: Creating new Vaadin Flow components
-modified: '2019-05-24 16:33:08 +0300'
+modified: '2019-05-25 19:37:04 +0300'
 priority: 2
 ---
-
-# {{ page.title }}
 
 When you start out with Vaadin Flow you will find that there are plenty of components to chose from even if you are using the basic core components.
 

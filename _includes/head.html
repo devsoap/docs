@@ -8,4 +8,8 @@
     <link rel="stylesheet" type="text/css" media="screen" href="//devsoap.com/assets/built/screen.css">
     <script type="text/javascript" src="//devsoap.com/assets/js/jquery-3.2.1.min.js?v=9dbc70bc6b"></script>
     <script type="text/javascript" src="{{ '/assets/js/index.js?v=' | append: site.github.build_revision | relative_url }}"></script>
+    
+    {% if page.custom_style %} 
+    <link rel="stylesheet" type="text/css" media="screen" href="{{ '/assets/css/' | append: page.custom_style | append: '?v=' | append: site.github.build_revision | relative_url }}">
+    {% endif %}
 </head>

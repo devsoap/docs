@@ -1,9 +1,8 @@
 ---
 layout: default
-modified: '2019-05-16 20:26:57 +0300'
+modified: '2019-05-25 19:37:04 +0300'
+title: Themes and styles
 ---
-
-# Themes and styles
 
 Even though a Vaadin project will look good without changing the defaults in many cases you will
 want to change how the application looks to match your companies brand or your personal taste.

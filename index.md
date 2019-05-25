@@ -2,10 +2,9 @@
 title: Documentation
 menus: header
 identifier: documentation
+custom_style: products.css
 ---
 
-# Documentation
+Welcome to the devsoap.com product documentation site! Please select which product you want to learn more about:
 
-Welcome to the devsoap.com product documentation site!
-
-In the future you will be able to find all the documentation for the Devsoap Inc. products on this one page. 
+{% include products.html %}

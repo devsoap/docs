@@ -1,11 +1,9 @@
 ---
 layout: default
 title: Introduction
-modified: '2019-05-18 18:04:43 +0300'
+modified: '2019-05-25 19:37:04 +0300'
 priority: 1
 ---
-
-# {{ page.title }}
 
 The DS Vaadin Flow Gradle plugin allows you to build your Vaadin projects leveraging the Gradle build tool. 
 
