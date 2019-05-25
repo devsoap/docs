@@ -29,8 +29,14 @@
         <h1><img src='{{collection.logo}}' style='height:1em' /> {{ title}} </h1>
 
         {{ content }}
+       
+        {% if page.comments == true %}
+        <hr/>
+        {% include comments.html %}
+        {% endif %}
       </div>
     </main>
+  
     {% include footer.html %}
     <script>
       var submenu = window.location.pathname.split('/')[1];

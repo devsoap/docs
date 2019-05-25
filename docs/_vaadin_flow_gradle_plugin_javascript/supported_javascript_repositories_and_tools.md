@@ -1,7 +1,8 @@
 ---
 layout: default
 title: Supported repositories and tools
-modified: '2019-05-25 19:37:04 +0300'
+modified: '2019-05-25 20:22:40 +0300'
+comments: true
 ---
 
 By default all the Vaadin components are distributed as WebJars. WebJars are pre-packaged web components that 

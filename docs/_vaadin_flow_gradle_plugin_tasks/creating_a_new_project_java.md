@@ -1,8 +1,9 @@
 ---
 layout: default
 title: Create a new Java project
-modified: '2019-05-25 19:37:04 +0300'
+modified: '2019-05-25 20:22:40 +0300'
 priority: 1
+comments: true
 ---
 
 The {{ site.data.strings["vaadin_plugin"].title }} supports Java project out-of-the-box and integrates seamlessly 
