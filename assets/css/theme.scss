@@ -16,7 +16,7 @@ $menu-selected-color: #26a8ed;
 
 aside {
    background: $menu-background-color;
-   width: 450px;
+   min-width: 450px;
 
    & ol {
      list-style: none;
@@ -31,6 +31,9 @@ aside {
         margin: 0;
         &.menu {
          font-weight: bold;  
+         & > a {
+            margin-left: 5px;
+         }
         }
         &.submenu {
          font-weight: normal;
@@ -123,5 +126,14 @@ pre > a {
    overflow: hidden;
    text-overflow: ellipsis;
    white-space: nowrap;
+}
 
+main {
+   display: block;
+}
+
+@media(min-width: 1280px){
+   main {
+      display: flex !important;
+   }
 }

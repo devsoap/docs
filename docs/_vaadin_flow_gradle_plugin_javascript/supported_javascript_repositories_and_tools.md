@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Supported repositories and tools
-modified: '2019-05-25 20:22:40 +0300'
+modified: '2019-05-27 20:43:58 +0300'
 comments: true
 ---
 
@@ -27,4 +27,12 @@ dependencies you might like are available as WebJars.
 
 ## Bower
 
+[Bower](https://bower.io) is the default package manager used by all Polymer 2 components. 
+
+
 ## Yarn (NPM)
+
+Since Vaadin 14 the preferred package manager has been [NPM}(https://www.npmjs.com/). 
+
+The plugin uses [Yarn](https://yarnpkg.com/en/) to manage the downloads from the NPM repository as well as perform 
+local mirroring to enable offline mode to work properly.

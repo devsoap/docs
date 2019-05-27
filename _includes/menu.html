@@ -1,24 +1,25 @@
+
 {% for collection in menus %}
-    <li class="menu" role="menuitem">
-        <a  href="/{{ collection.label }}" title="Go to {{ collection.title }}">
-            <img src="{{collection.logo}}" style="height:1em" />
+    <li class="menu" role="menuitem" >
+        <a href="/{{ collection.label }}" title="Go to {{ collection.title }}">
+        <img src="{{collection.logo}}" style="height:1em" />
             {{ collection.title }}
         </a>
-        <ol class="side-nav-submenu {{rootMenuClass}}" id="side-nav-{{ collection.label }}">
+        <ol class="side-nav-submenu">
             {% assign docs = collection.docs | sort: 'priority' %}
             {% for doc in docs %}
                 {% if doc.url contains 'index.html' %}
                 {% else %}
-                    <li class="submenu submenu" role="menuitem">
+                    <li id="{{doc.relative_path}}" class="submenu" role="menuitem">
                         <a href="{{ doc.url }}" title="Go to {{ doc.title }}">{{ doc.title }}</a>
                     </li>
                 {% endif %}
             {% endfor %}
 
+            {% assign isRootMenu = false %}
             {% assign menus = site.collections | where: "parent", collection.label | sort: 'priority' %}
-            {% assign rootMenuClass = '' %}
             {% if menus != empty %} 
-                <li class="submenu submenu" role="menuitem">
+                <li class="submenu" role="menuitem">
                     {% include menu.html %}
                 </li>
             {% endif %}

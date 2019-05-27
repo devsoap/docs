@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Adding a Javascript dependency
-modified: '2019-05-25 20:22:40 +0300'
+modified: '2019-05-27 20:43:58 +0300'
 comments: true
 ---
 
@@ -17,6 +17,10 @@ files automatically.
 
 To add a new dependency we use the *vaadinClientDependencies*-configuration block in *build.gradle*. 
 
+### Bower
+
+This is how you would include a bower component:
+
 ```groovy
 vaadinClientDependencies {
     bower 'PolymerElements/paper-slider'
@@ -28,12 +32,39 @@ project using *Bower*.
 
 The syntax for adding dependencies is very similar to what adding normal Gradle dependencies is.
 
+### Yarn
+
 And here is the same example using Yarn:
+
 ```groovy
  vaadinClientDependencies {
     yarn '@polymer/paper-slider:0.0.3'
 }
 ```
+
+It looks mostly the same except using the **yarn** configuration instead of **bower**.
+
+### @NPMPackage
+
+New since *1.2* is also a way of using the [@NpmPackage](https://vaadin.com/api/platform/14.0.0.beta2/com/vaadin/flow/component/dependency/NpmPackage.html) annotation in your application to fetch the client side dependencies with Yarn.
+
+You can add this annotation to any class and the plugin will automatically download that dependency for you.
+
+The syntax of the annotation is the following:
+
+```css
+@NpmPackage(value = "@polymer/paper-slider", version="0.0.3");
+|__________||__________________________________||_______________|
+     1                     2                           3        
+
+1) The annotation to define that we want to download the NPM package
+2) The name of the package to download
+3) The version of the package to download
+```
+
+The plugin will automatically download the package at build time and place it in the */build/frontend/node_modules folder*.
+
+### Webjars
 
 And finally here is the same using Webjars:
 ```groovy

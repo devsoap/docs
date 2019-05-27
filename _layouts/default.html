@@ -1,13 +1,31 @@
+{% assign collection = site.collections | where: "label", page.collection | first %}
+{% if collection.parent != 'main' %}
+  {% assign collection = site.collections | where: "label", collection.parent | first %}
+{% endif %}
+{% if collection.label == 'posts' %}
+  {% assign collection = null %}
+{% endif %}  
+
+{% assign title = page.title %}
+{% if title == 'Index' %}
+  {% assign title = collection.title %}
+{% endif %}
+
+{% assign menus = site.collections | where: "label", collection.label %}
+{% assign isRootMenu = true %}
+
 <!DOCTYPE html>
 <html lang="{{ site.lang | default: "en-US" }}">
   {% include head.html %}
   <body style="display:flex;flex-direction:column;min-height:100vh">
     {% include header.html %}
-    <main id="site-main" class="site-main outer" role="main" style="display:flex;flex-grow:1">
-      <aside>
-        <ol class="side-nav" role="menu" style="height:50px">
-          {% assign menus = site.collections | where: "parent", 'main' | sort: 'priority' %}
-          {% assign rootMenuClass = 'root-menu' %}
+    <main id="site-main" class="site-main outer" role="main" style="flex-grow:1">
+      {% if collection != null %}
+        <aside>
+      {% else %}
+        <aside style="display:none">
+      {% endif %}
+        <ol class="side-nav" role="menu">
           {% include menu.html %}
         </ol>
       </aside>
@@ -15,17 +33,7 @@
         <div class="last-modifed" title="Last modified">
           {{page.modified | date_to_string: "ordinal", "US" }}
         </div>
-        
-        {% assign collection = site.collections | where: "label", page.collection | first %}
-        {% if collection.parent != 'main' %}
-          {% assign collection = site.collections | where: "label", collection.parent | first %}
-        {% endif %}
-        
-        {% assign title = page.title %}
-        {% if title == 'Index' %}
-          {% assign title = collection.title %}
-        {% endif %}
-
+      
         <h1><img src='{{collection.logo}}' style='height:1em' /> {{ title}} </h1>
 
         {{ content }}
@@ -38,10 +46,7 @@
     </main>
   
     {% include footer.html %}
-    <script>
-      var submenu = window.location.pathname.split('/')[1];
-      showSubmenu(submenu);  
-    </script>
+
     <script>
       analytics();
     </script>
