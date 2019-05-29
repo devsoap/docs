@@ -45,11 +45,17 @@ collections:
     title: Themes and styles
     parent: vaadin_flow_gradle_plugin
     priority: 4
+  vaadin_flow_gradle_plugin_plugins:
+    output: true
+    title: 3rd party plugin support
+    parent: vaadin_flow_gradle_plugin
+    priority: 5
+    gretty_version: 2.3.1
   vaadin_flow_gradle_plugin_advanced:
     output: true
     title: Advanced topics
     parent: vaadin_flow_gradle_plugin
-    priority: 5
+    priority: 6
 defaults:
   - scope:
       path: ""

@@ -1,6 +1,6 @@
 ---
 title: Dependencies
-modified: '2019-05-29 13:38:38 +0300'
+modified: '2019-05-29 18:06:52 +0300'
 ---
 
 When developing Vaadin Flow applications you will need to define a few required dependencies in your project.
@@ -18,7 +18,16 @@ To set the Vaadin version you can use the following closure:
 #### build.gradle
 ```groovy
 vaadin {
-    version '{{ site.data.strings["vaadin_plugin"].framework_version }}'
+    version = '{{ site.data.strings["vaadin_plugin"].framework_version }}'
+}
+```
+
+You can also set the Vaadin version via the *ext* property
+
+#### build.gradle
+```groovy
+ext {
+    vaadinVersion = '{{ site.data.strings["vaadin_plugin"].framework_version }}'
 }
 ```
 
