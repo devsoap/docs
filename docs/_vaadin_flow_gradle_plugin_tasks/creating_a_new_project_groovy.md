@@ -1,9 +1,7 @@
 ---
-layout: default
 title: Create a new Groovy project
-modified: '2019-05-25 20:22:40 +0300'
+modified: '2019-05-29 13:38:38 +0300'
 priority: 2
-comments: true
 ---
 
 The {{ site.data.strings["vaadin_plugin"].title }} supports Groovy project out-of-the-box and integrates seamlessly with the {{ site.data.strings["groovy_plugin"].title }}.

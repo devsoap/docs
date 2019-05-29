@@ -1,8 +1,6 @@
 ---
-layout: default
 title: Dependencies
-modified: '2019-05-25 20:22:40 +0300'
-comments: true
+modified: '2019-05-29 13:38:38 +0300'
 ---
 
 When developing Vaadin Flow applications you will need to define a few required dependencies in your project.

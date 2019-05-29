@@ -1,9 +1,7 @@
 ---
-layout: default
 title: Using Cascading Style Sheets (CSS)
 priority: 1
-modified: '2019-05-25 20:22:40 +0300'
-comments: true
+modified: '2019-05-29 13:38:38 +0300'
 ---
 
 Using [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS) is the default way of styling Vaadin applications.

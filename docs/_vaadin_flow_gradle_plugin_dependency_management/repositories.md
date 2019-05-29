@@ -1,8 +1,6 @@
 ---
-layout: default
 title: Repositories
-modified: '2019-05-25 20:22:40 +0300'
-comments: true
+modified: '2019-05-29 13:38:38 +0300'
 ---
 
 When developing your application you will most likely want to start off by adding a universal repository like [Maven Central](https://search.maven.org) or [JCenter](https://bintray.com/bintray/jcenter). Gradle supports both of these with built in helpers.

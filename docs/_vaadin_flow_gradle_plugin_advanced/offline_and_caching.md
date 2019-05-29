@@ -1,8 +1,6 @@
 ---
-layout: default
 title: Offline mode and Caching
-modified: '2019-05-25 20:22:40 +0300'
-comments: true
+modified: '2019-05-29 13:38:38 +0300'
 ---
 
 The {{ site.data.strings["vaadin_plugin"].title }} supports both working offline and advanced methods of caching artifacts.

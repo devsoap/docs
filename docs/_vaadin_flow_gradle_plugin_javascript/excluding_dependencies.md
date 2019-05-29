@@ -1,8 +1,6 @@
 ---
-layout: default
 title: Excluding unwanted dependencies
-modified: '2019-05-27 20:43:58 +0300'
-comments: true
+modified: '2019-05-29 13:38:38 +0300'
 ---
 
 Due to the varying way client dependencies may be packaged some times the plugin will include too many dependencies,

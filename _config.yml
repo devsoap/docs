@@ -50,3 +50,11 @@ collections:
     title: Advanced topics
     parent: vaadin_flow_gradle_plugin
     priority: 5
+defaults:
+  - scope:
+      path: ""
+      type_: "pages"
+    values:
+      layout: "default"
+      comments: true
+      priority: 100

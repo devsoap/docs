@@ -1,9 +1,7 @@
 ---
-layout: default
 title: Layouts with Groovy HTML Templates
 priority: 4
-modified: '2019-05-25 20:22:40 +0300'
-comments: true
+modified: '2019-05-29 13:38:38 +0300'
 ---
 
 You can also specify your [Polymer templates](polymer-templates.html) using a Groovy DSL. 

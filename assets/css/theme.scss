@@ -137,3 +137,16 @@ main {
       display: flex !important;
    }
 }
+
+h1,h2,h3,h4,h5,h6,hr { clear:both }
+
+.screenshot {
+      width: 500px;
+      max-width: 30%;
+      margin-bottom: 25px;
+      margin-right: 10px;
+      padding: 10px;
+      background-color: #eee;
+      box-shadow: 1px 1px solid black;
+      float:left;
+}

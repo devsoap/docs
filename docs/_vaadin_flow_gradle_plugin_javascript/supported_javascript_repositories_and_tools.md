@@ -1,8 +1,6 @@
 ---
-layout: default
 title: Supported repositories and tools
-modified: '2019-05-27 20:43:58 +0300'
-comments: true
+modified: '2019-05-29 13:38:38 +0300'
 ---
 
 By default all the Vaadin components are distributed as WebJars. WebJars are pre-packaged web components that 
@@ -22,7 +20,7 @@ confusing for us backend developers.
 By default all the Vaadin components are distributed as WebJars. WebJars are pre-packaged web components that 
 you can add as a standard dependency to your Gradle build.
 
-While it is preferrable to use WebJars as they can be handled by the standard dependency management not all 
+While it is preferable to use WebJars as they can be handled by the standard dependency management not all 
 dependencies you might like are available as WebJars.
 
 ## Bower
