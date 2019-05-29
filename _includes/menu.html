@@ -1,6 +1,11 @@
 
 {% for collection in menus %}
+    {% assign collection_url = "/" | append: collection.label | append: "/index.html" %}
+    {% if page.url == collection_url %}
+    <li class="menu selected" role="menuitem" >
+    {% else %}
     <li class="menu" role="menuitem" >
+    {% endif %}
         <a href="/{{ collection.label }}" title="Go to {{ collection.title }}">
         <img src="{{collection.logo}}" style="height:1em" />
             {{ collection.title }}
@@ -10,7 +15,11 @@
             {% for doc in docs %}
                 {% if doc.url contains 'index.html' %}
                 {% else %}
+                    {% if page.url == doc.url %}
+                    <li id="{{doc.relative_path}}" class="submenu selected" role="menuitem">
+                    {% else %}
                     <li id="{{doc.relative_path}}" class="submenu" role="menuitem">
+                    {% endif %}
                         <a href="{{ doc.url }}" title="Go to {{ doc.title }}">{{ doc.title }}</a>
                     </li>
                 {% endif %}

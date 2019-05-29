@@ -1,10 +1,10 @@
 ---
 title: Introduction
-modified: '2019-05-29 13:38:38 +0300'
+modified: '2019-05-29 21:08:06 +0300'
 priority: 1
 ---
 
-The DS Vaadin Flow Gradle plugin allows you to build your Vaadin projects leveraging the Gradle build tool. 
+The {{ site.data.strings["vaadin_plugin"].title }} allows you to build your Vaadin projects leveraging the Gradle build tool. 
 
 It's main purpose is to seamlessly integrate with the Gradle build ecosystem and provide the developer with an easy
 interface to build complex Vaadin Flow applications.

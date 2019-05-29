@@ -34,9 +34,16 @@ aside {
          & > a {
             margin-left: 5px;
          }
+         &.selected > a {
+            color: $menu-selected-color !important;
+         }
         }
         &.submenu {
          font-weight: normal;
+
+         &.selected a {
+            color: $menu-selected-color !important;
+         }
         }
      }
    }

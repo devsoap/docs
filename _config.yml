@@ -56,6 +56,13 @@ collections:
     title: Advanced topics
     parent: vaadin_flow_gradle_plugin
     priority: 6
+  fn_gradle_plugin:
+    output: true
+    title: DS FN Gradle Plugin
+    description: A Gradle plugin for developing Oracle FN functions
+    parent: main
+    logo: https://devsoap.com/content/images/2018/10/Gradle_FN_logo_50x44.png
+    header_image: https://devsoap.com/content/images/2018/10/fn-background-sample-2.png
 defaults:
   - scope:
       path: ""
