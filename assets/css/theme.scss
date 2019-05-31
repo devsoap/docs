@@ -13,6 +13,7 @@ $body-color: #cbeafb;
 $menu-background-color: desaturate(darken($body-color, 5%), 100%);
 $menu-color: darken($menu-background-color, 50%);
 $menu-selected-color: #26a8ed;
+$menu-item-color: #575757;
 
 aside {
    background: $menu-background-color;
@@ -27,23 +28,43 @@ aside {
         margin:10px; 
      }
 
+
      li {
         margin: 0;
-        &.menu {
-         font-weight: bold;  
-         & > a {
-            margin-left: 5px;
-         }
-         &.selected > a {
-            color: $menu-selected-color !important;
-         }
-        }
-        &.submenu {
-         font-weight: normal;
 
-         &.selected a {
+        &.menu {
+          font-weight: bold;  
+          & > a {
+            margin-left: 5px;
+          }
+          & > a::before {
+            content: "⎆ ";
+          }
+          &.selected > a {
             color: $menu-selected-color !important;
-         }
+          }
+          &.selected  > a::before {
+            content: "";
+          }        
+        }
+
+        &.submenu {
+          font-weight: normal;
+          &.selected {
+            & > a {
+               color: $menu-selected-color !important;
+            }
+                     
+            & > .bookmark-list {
+               margin: 0;
+               .bookmark > a {
+                  color: darken(silver, 20%) !important;
+               }
+               .bookmark > a::before {
+                  content: '⎘ ';
+               }
+            }
+          }
         }
      }
    }
@@ -73,7 +94,10 @@ aside {
             content: '◂'
          }
       }
+
+      
    }
+
 }
 
 .site-main.outer {
@@ -145,7 +169,9 @@ main {
    }
 }
 
-h1,h2,h3,h4,h5,h6,hr { clear:both }
+h1,h2,h3,h4,h5,h6,hr { 
+   clear:both; 
+}
 
 .screenshot {
       width: 500px;

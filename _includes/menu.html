@@ -1,3 +1,5 @@
+{%- capture newline %}
+{% endcapture -%}
 
 {% for collection in menus %}
     {% assign collection_url = "/" | append: collection.label | append: "/index.html" %}
@@ -17,10 +19,19 @@
                 {% else %}
                     {% if page.url == doc.url %}
                     <li id="{{doc.relative_path}}" class="submenu selected" role="menuitem">
+                        <a href="{{ doc.url }}" title="Go to {{ doc.title }}">{{ doc.title }}</a>
+                        <ol class="bookmark-list">
+                            {% assign lines = doc.content | split: newline  %}
+                            {% for line in lines %}
+                                {% if line contains "h2" %}
+                                    <li class="bookmark">{{line | replace: 'id="', 'href="#' | replace: 'h2', 'a'}}</li>
+                                {% endif %}
+                            {% endfor %}
+                        </ol>
                     {% else %}
                     <li id="{{doc.relative_path}}" class="submenu" role="menuitem">
-                    {% endif %}
                         <a href="{{ doc.url }}" title="Go to {{ doc.title }}">{{ doc.title }}</a>
+                    {% endif %}                       
                     </li>
                 {% endif %}
             {% endfor %}

@@ -63,6 +63,10 @@ collections:
     parent: main
     logo: https://devsoap.com/content/images/2018/10/Gradle_FN_logo_50x44.png
     header_image: https://devsoap.com/content/images/2018/10/fn-background-sample-2.png
+  fn_gradle_plugin_tasks:
+    output: true
+    title: Tasks
+    parent: fn_gradle_plugin
 defaults:
   - scope:
       path: ""

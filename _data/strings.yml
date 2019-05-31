@@ -36,4 +36,5 @@ node_plugin:
     title: "[Node Plugin](https://github.com/srs/gradle-node-plugin)"
     
 fn_plugin:
+    version: 0.2
     title: "[DS Vaadin Flow Gradle Plugin](https://devsoap.com/fn-project-gradle-plugin)"
