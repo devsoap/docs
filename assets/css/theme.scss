@@ -43,9 +43,7 @@ aside {
           &.selected > a {
             color: $menu-selected-color !important;
           }
-          &.selected  > a::before {
-            content: "";
-          }        
+       
         }
 
         &.submenu {
@@ -69,11 +67,16 @@ aside {
      }
    }
 
-   & > ol.open > li.menu > a::after {
-      float: right;
-      content: '▾'
-     }
-
+   & > ol > li.menu > a {      
+      &::after {
+         float: right;
+         content: '▾';
+         padding-right: 10px;
+      }
+      &::before {
+         content: "";
+      }        
+   }
 
    & > ol {
       padding-left:0;
@@ -87,15 +90,7 @@ aside {
             line-height: 2em;
             background: lighten($menu-background-color, 10%);
          }
-
-         & > a::after {
-            float: right;
-            padding-right: 10px;
-            content: '◂'
-         }
-      }
-
-      
+      }      
    }
 
 }
