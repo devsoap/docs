@@ -124,6 +124,7 @@ aside {
    .highlight pre {
       background-color: lighten(black, 20%);
       padding: 10px;
+      overflow: auto;
    }
   
    .lineno { 
