@@ -19,3 +19,17 @@ function analytics() {
         crossDomain: true,
     });
 }
+
+function sponsorshipScroll() {
+    var elem = document.getElementById("sponsorship");
+    var height = document.getElementsByTagName("header")[0].offsetHeight;
+    if(window.scrollY >= height) {
+        elem.style.position = 'fixed';
+    } else {
+        elem.style.position = 'static';
+    }
+}
+
+window.onscroll = function() {
+    sponsorshipScroll();
+};
