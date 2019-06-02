@@ -67,6 +67,12 @@ collections:
     output: true
     title: Tasks
     parent: fn_gradle_plugin
+    priority: 1
+  fn_gradle_plugin_multimodule:
+    output: true
+    title: Multi-module applications
+    parent: fn_gradle_plugin  
+    priority: 2
 defaults:
   - scope:
       path: ""

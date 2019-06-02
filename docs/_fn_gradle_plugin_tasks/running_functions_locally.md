@@ -1,6 +1,7 @@
 ---
-modified: '2019-05-31 13:47:16 +0300'
+modified: '2019-06-02 16:42:47 +0300'
 title: Running functions locally
+priority: 3
 ---
 
 Once you have [created a new function]({% link _fn_gradle_plugin_tasks/create_java_function.md %}) the {{ site.data.strings["fn_plugin"].title }} provides ways of both running and testing the function.
