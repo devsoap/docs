@@ -57,6 +57,12 @@ collections:
     title: Advanced topics
     parent: vaadin_flow_gradle_plugin
     priority: 6
+  vaadin_flow_gradle_plugin_api:
+    output: true
+    title: Source Documentation
+    parent: vaadin_flow_gradle_plugin
+    priority: 7
+    comments: false  
   fn_gradle_plugin:
     output: true
     title: DS FN Gradle Plugin
