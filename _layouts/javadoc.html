@@ -1,0 +1,56 @@
+{% if page.collection != null %}
+  {% assign collection = site.collections | where: "label", page.collection | first %}
+  {% if collection.parent != 'main' %}
+    {% assign collection = site.collections | where: "label", collection.parent | first %}
+  {% endif %}
+  {% if collection.label == 'posts' %}
+    {% assign collection = null %}
+  {% endif %}  
+  {% assign title = page.title %}
+  {% if title == 'Index' %}
+    {% assign title = collection.title %}
+  {% endif %}
+{% else %}
+  <!-- Front page -->
+  {% assign title = page.title %}
+  {% assign collection = null %}
+{% endif %}
+
+{% assign menus = site.collections | where: "label", collection.label %}
+{% assign isRootMenu = true %}
+
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: "en-US" }}">
+  {% include head.html %}
+  <body style="display:flex;flex-direction:column;min-height:100vh">
+    {% include header.html %}
+
+    {% if collection != null %}
+    <div id="sponsorship">
+        This product is only available because of community sponsorship. Without sponsorship this product will become licensed software. Please help 
+        continue keeping this open and free for everyone by donating a small amount <a href="{{collection.sponsor_link}}">here</a>. Thank you!
+    </div>
+    {% endif %}
+
+    <main id="site-main" class="site-main outer" role="main" style="flex-grow:1">
+      {% if collection != null %}
+        <aside>
+      {% else %}
+        <aside style="display:none">
+      {% endif %}
+        <ol class="side-nav" role="menu">
+          {% include menu.html %}
+        </ol>
+      </aside>
+     
+        {{ content }}
+        
+    </main>
+  
+    {% include footer.html %}
+
+    <script>
+      analytics();
+    </script>
+  </body>
+</html>

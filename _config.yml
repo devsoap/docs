@@ -75,6 +75,13 @@ collections:
     title: Multi-module applications
     parent: fn_gradle_plugin  
     priority: 2
+  fn_gradle_plugin_api:
+    output: true
+    title: Source Documentation
+    parent: fn_gradle_plugin
+    priority: 3
+    comments: false
+
 defaults:
   - scope:
       path: ""
@@ -83,3 +90,4 @@ defaults:
       layout: "default"
       comments: true
       priority: 100
+      index_page: index.html
