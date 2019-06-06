@@ -90,4 +90,3 @@ defaults:
       layout: "default"
       comments: true
       priority: 100
-      index_page: index.html

@@ -2,7 +2,7 @@
 {% endcapture -%}
 
 {% for collection in menus %}
-    {% assign collection_url = "/" | append: collection.label | append: "/{{collection.index_page}}" %}
+    {% assign collection_url = "/" | append: collection.label | append: "/index.html" %}
     {% if page.url == collection_url %}
     <li class="menu selected" role="menuitem" >
     {% else %}
