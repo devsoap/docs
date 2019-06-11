@@ -1,6 +1,6 @@
 ---
 title: Adding a Javascript dependency
-modified: '2019-05-29 13:38:38 +0300'
+modified: '2019-06-11 19:58:51 +0300'
 ---
 
 The plugin supports [3 ways of adding a Javascript dependency](/vaadin_flow_gradle_plugin_javascript), 
@@ -112,11 +112,11 @@ public class PaperSlider extends Component {
 }
 ```
 
-You can then use this class anywhere in your views just as you do with normal Vaadin components. 
+You can then use this class anywhere in your views just as you do with normal Vaadin components.
 
-The task will also add the client dependency to your *build.gradle* automatically, so you don't have to 
+The task will also add the client dependency to your *build.gradle* automatically, so you don't have to
 manually add the dependency.
 
-One thing to note is that, the first time you run the task it will be slow. This is because Gradle will 
-need to download all necessery tooling for handling Javascript web components and download the actual component 
+One thing to note is that, the first time you run the task it will be slow. This is because Gradle will
+need to download all necessary tooling for handling Javascript web components and download the actual component
 as well. This can take some time so be patient. Once you have the dependencies already downloaded then it will be faster.

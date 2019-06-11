@@ -1,6 +1,6 @@
 ---
 title: Offline mode and Caching
-modified: '2019-05-29 13:38:38 +0300'
+modified: '2019-06-11 19:58:51 +0300'
 ---
 
 The {{ site.data.strings["vaadin_plugin"].title }} supports both working offline and advanced methods of caching artifacts.
@@ -14,7 +14,7 @@ For more information about using Gradle in offline mode check out the relevant c
 
 ## Production mode offline mode
 
-When you have turned on Vaadin production mode (``vaadin.productionMode=true``) or if you have defined client dependencies either via (``vaadin.clientDependencies``) or using the [@NpmPackage]() annotation the { site.data.strings["vaadin_plugin"].title }} will also enables offline mode for client dependency resolution when the ``--offline`` parameter is given. 
+When you have turned on Vaadin production mode (``vaadin.productionMode=true``) or if you have defined client dependencies either via (``vaadinclientDependencies``) or using the [@NpmPackage]() annotation the {{} site.data.strings["vaadin_plugin"].title }} will also enables offline mode for client dependency resolution when the ``--offline`` parameter is given.
 
 For this to work you will need to (at least once) resolve all the dependencies online which after you will need to add ``.gradle/yarn/yarn-offline-mirror`` and ``build/frontend/yarn.lock`` to your version control so the plugin can resolve the dependencies from your local mirror when you are offline.
 

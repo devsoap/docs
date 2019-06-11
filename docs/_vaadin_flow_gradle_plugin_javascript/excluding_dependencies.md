@@ -1,6 +1,6 @@
 ---
 title: Excluding unwanted dependencies
-modified: '2019-05-29 13:38:38 +0300'
+modified: '2019-06-11 19:58:51 +0300'
 ---
 
 Due to the varying way client dependencies may be packaged some times the plugin will include too many dependencies,
@@ -27,7 +27,7 @@ vaadinTranspileDependencies {
 
 That will make the plugin ignore the html import when bundling for production.
 
-While the above is a quick fix, be aware the having a ignored depedendency will most likely mean that you either have extra
+While the above is a quick fix, be aware the having a ignored dependency will most likely mean that you either have extra
 @HTMLImports in your source code that could be removed or that somewhere some component will be broken due to the missing
 client implementation.
 
