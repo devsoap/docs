@@ -25,7 +25,7 @@ collections:
     parent: main
     logo: https://devsoap.com/content/images/2018/10/Gradle_Vaadin_logo_50x44.png
     header_image: https://devsoap.com/content/images/2018/09/vaadin_post_header.png
-    sponsor_link: https://devsoap.com/gradle-vaadin-flow-plugin/#supporttheproject
+    sponsor_link: https://devsoap.com/store/?product=gradle-vaadin-flow
   vaadin_flow_gradle_plugin_dependency_management:
     output: true
     title: Dependency Management
@@ -70,7 +70,7 @@ collections:
     parent: main
     logo: https://devsoap.com/content/images/2018/10/Gradle_FN_logo_50x44.png
     header_image: https://devsoap.com/content/images/2018/10/fn-background-sample-2.png
-    sponsor_link: https://devsoap.com/fn-project-gradle-plugin/#supporttheproject
+    sponsor_link: https://devsoap.com/store/?product=gradle-fn-plugin
   fn_gradle_plugin_tasks:
     output: true
     title: Tasks
