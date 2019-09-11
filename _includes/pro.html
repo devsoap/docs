@@ -1,0 +1,53 @@
+<style>
+    #email, #key {
+        border: 1px solid silver;
+        font-size: 1em;
+        line-height: 2em;
+        padding-left: 5px;
+    }
+</style>
+
+<div id="article-container">
+    This article is exclusively for <b>PRO</b> subscribers. Please fill in your PRO subscription details:
+    <p>
+        <p><span style="display:inline-block;width:50px">Email:</span> <input type="email" id="email" name="email" placeholder="john@gmail.com" required></p>
+        <p><span style="display:inline-block;width:50px">Key:</span> <input type="text" id="key" name="key" placeholder="XXXXX-XXXXXX-XXXXXX" required></p>
+        <button onclick="fetchProContent()" >Show article</button> or buy a <a href="https://devsoap.com/store?product={{page.product}}" >PRO subscription</a>
+    </p>
+</div>
+    
+<script>
+    function fetchProContent() {
+        var product = "{{page.product}}";
+        var article = "{{page.article}}";
+        var email = document.getElementById("email").value;
+        var key = document.getElementById("key").value;
+        if (email != undefined && email.trim() != '' && key != undefined && key.trim() != '') {
+            fetch(`https://fns.devsoap.com/t/license-server/fetch?email=${email}&product=${product}&article=${article}&key=${key}`)
+            .then(function(response){
+                if(response.status == 200) {
+                    window.localStorage.setItem("devsoap.{{page.product}}.email", email);
+                    window.localStorage.setItem("devsoap.{{page.product}}.key", key);
+                    window.localStorage.setItem("devsoap.{{page.product}}.article.{{page.article}}", response.text);
+                    document.getElementById("article-container").innerHTML = response.text;
+                }          
+            });
+        }
+    } 
+    
+    var storedArticle = window.localStorage.getItem("devsoap.{{page.product}}.article.{{page.article}}");
+    if(storedArticle != undefined) {
+        document.getElementById("article-container").innerHTML = storedArticle;
+    } else {
+        console.log("Article not found in local storage.");
+        var storedEmail = window.localStorage.getItem("devsoap.{{page.product}}.email");
+        var storedKey = window.localStorage.getItem("devsoap.{{page.product}}.key");
+        if (storedEmail != undefined && storedKey != undefined) {
+            document.getElementById("email").value = storedEmail;
+            document.getElementById("key").value = storedKey;
+            fetchProContent();
+        } else {
+            console.log("Credentials not found in local storage. Showing login dialog.");
+        }
+    }
+</script>
