@@ -5,6 +5,26 @@
         line-height: 2em;
         padding-left: 5px;
     }
+    #article-container > h1 {
+        display: none;
+    }
+    .loader {
+        border: 16px solid #f3f3f3; /* Light grey */
+        border-top: 16px solid #3498db; /* Blue */
+        border-radius: 50%;
+        width: 120px;
+        height: 120px;
+        animation: spin 2s linear infinite;
+		margin-left: auto;
+        margin-right: auto;
+		margin-bottom: 15em;
+        margin-top: 15em;
+
+    }
+    @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+    }
 </style>
 
 <div id="article-container">
@@ -18,30 +38,36 @@
     
 <script>
     function fetchProContent() {
-        var product = "{{page.product}}";
+        var product = "{{collection.product}}";
         var article = "{{page.article}}";
         var email = document.getElementById("email").value;
         var key = document.getElementById("key").value;
         if (email != undefined && email.trim() != '' && key != undefined && key.trim() != '') {
+            document.getElementById("article-container").innerHTML = "<div class='loader'></div>";
             fetch(`https://fns.devsoap.com/t/license-server/fetch?email=${email}&product=${product}&article=${article}&key=${key}`)
-            .then(function(response){
-                if(response.status == 200) {
-                    window.localStorage.setItem("devsoap.{{page.product}}.email", email);
-                    window.localStorage.setItem("devsoap.{{page.product}}.key", key);
-                    window.localStorage.setItem("devsoap.{{page.product}}.article.{{page.article}}", response.text);
-                    document.getElementById("article-container").innerHTML = response.text;
-                }          
-            });
+                .then(function(response) {
+                    if(response.ok) {
+                        return response.text();
+                    }
+                    throw new Error('Failed fetching article.');
+                })
+                .then(function(html){
+                        window.localStorage.setItem("devsoap.{{collection.product}}.email", email);
+                        window.localStorage.setItem("devsoap.{{collection.product}}.key", key);
+                        window.localStorage.setItem("devsoap.{{collection.product}}.article.{{page.article}}", html);
+                        document.getElementById("article-container").innerHTML = html;
+                        document.getElementById("sponsorship").style.display = 'none';
+                });
         }
     } 
     
-    var storedArticle = window.localStorage.getItem("devsoap.{{page.product}}.article.{{page.article}}");
+    var storedArticle = window.localStorage.getItem("devsoap.{{collection.product}}.article.{{page.article}}");
     if(storedArticle != undefined) {
         document.getElementById("article-container").innerHTML = storedArticle;
     } else {
         console.log("Article not found in local storage.");
-        var storedEmail = window.localStorage.getItem("devsoap.{{page.product}}.email");
-        var storedKey = window.localStorage.getItem("devsoap.{{page.product}}.key");
+        var storedEmail = window.localStorage.getItem("devsoap.{{collection.product}}.email");
+        var storedKey = window.localStorage.getItem("devsoap.{{collection.product}}.key");
         if (storedEmail != undefined && storedKey != undefined) {
             document.getElementById("email").value = storedEmail;
             document.getElementById("key").value = storedKey;

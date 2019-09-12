@@ -26,43 +26,51 @@ collections:
     logo: https://devsoap.com/content/images/2018/10/Gradle_Vaadin_logo_50x44.png
     header_image: https://devsoap.com/content/images/2018/09/vaadin_post_header.png
     sponsor_link: https://devsoap.com/store/?product=gradle-vaadin-flow
+    product: gradle-vaadin-flow
   vaadin_flow_gradle_plugin_dependency_management:
     output: true
     title: Dependency Management
     parent: vaadin_flow_gradle_plugin
     priority: 1  
+    product: gradle-vaadin-flow
   vaadin_flow_gradle_plugin_tasks:
     output: true
     title: Plugin tasks
     parent: vaadin_flow_gradle_plugin
     priority: 2
+    product: gradle-vaadin-flow
   vaadin_flow_gradle_plugin_javascript:
     output: true
     title: Javascript and Web Components
     parent: vaadin_flow_gradle_plugin
     priority: 3
+    product: gradle-vaadin-flow
   vaadin_flow_gradle_plugin_themes:
     output: true
     title: Themes and styles
     parent: vaadin_flow_gradle_plugin
     priority: 4
+    product: gradle-vaadin-flow
   vaadin_flow_gradle_plugin_plugins:
     output: true
     title: 3rd party plugin support
     parent: vaadin_flow_gradle_plugin
     priority: 5
     gretty_version: 2.3.1
+    product: gradle-vaadin-flow
   vaadin_flow_gradle_plugin_advanced:
     output: true
     title: Advanced topics
     parent: vaadin_flow_gradle_plugin
     priority: 6
+    product: gradle-vaadin-flow
   vaadin_flow_gradle_plugin_api:
     output: true
     title: Source Documentation
     parent: vaadin_flow_gradle_plugin
     priority: 7
     comments: false  
+    product: gradle-vaadin-flow
   fn_gradle_plugin:
     output: true
     title: DS FN Gradle Plugin
