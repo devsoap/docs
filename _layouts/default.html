@@ -68,8 +68,7 @@
     <script>
       analytics();
 
-      if(window.localStorage.getItem("devsoap.{{collection.product}}.email") == undefined || 
-        window.localStorage.getItem("devsoap.{{collection.product}}.key") == undefined) {
+      if(window.localStorage.getItem("devsoap.{{collection.product}}.credentials") == undefined) {
           document.getElementById("sponsorship").style.display = 'block';
       }
     </script>

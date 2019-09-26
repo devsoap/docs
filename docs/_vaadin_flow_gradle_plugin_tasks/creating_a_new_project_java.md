@@ -1,7 +1,8 @@
 ---
 title: Create a new Java project
 modified: '2019-05-29 13:38:38 +0300'
-priority: 1
+priority: 2
+compatibility_mode: true
 ---
 
 The {{ site.data.strings["vaadin_plugin"].title }} supports Java project out-of-the-box and integrates seamlessly 

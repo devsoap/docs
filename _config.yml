@@ -105,3 +105,4 @@ defaults:
       comments: true
       priority: 100
       pro: false
+      compatibility_mode: false

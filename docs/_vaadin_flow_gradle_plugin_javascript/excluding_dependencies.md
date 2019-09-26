@@ -1,6 +1,7 @@
 ---
 title: Excluding unwanted dependencies
 modified: '2019-06-11 19:58:51 +0300'
+compatibility_mode: true
 ---
 
 Due to the varying way client dependencies may be packaged some times the plugin will include too many dependencies,

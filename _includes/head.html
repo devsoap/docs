@@ -12,4 +12,8 @@
     {% if page.custom_style %} 
     <link rel="stylesheet" type="text/css" media="screen" href="{{ '/assets/css/' | append: page.custom_style | append: '?v=' | append: site.github.build_revision | relative_url }}">
     {% endif %}
+
+    {% if page.pro %}
+    <link rel="stylesheet" type="text/css" media="screen" href="{{ '/assets/css/prism.css' | append: '?v=' | append: site.github.build_revision | relative_url }}">
+    {% endif %}
 </head>

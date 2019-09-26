@@ -1,6 +1,7 @@
 ---
 title: Production Mode
 modified: '2019-05-29 18:06:52 +0300'
+compatibility_mode: true
 ---
 
 Vaadin comes with a special production mode to enable running the application with older browsers, namely Internet Explorer 11.

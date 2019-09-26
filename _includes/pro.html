@@ -15,10 +15,7 @@
         width: 120px;
         height: 120px;
         animation: spin 2s linear infinite;
-		margin-left: auto;
-        margin-right: auto;
-		margin-bottom: 15em;
-        margin-top: 15em;
+        margin: 15em auto;
 
     }
     @keyframes spin {
@@ -35,8 +32,17 @@
         <button onclick="fetchProContent()" >Show article</button> or buy a <a href="https://devsoap.com/store?product={{page.product}}" >PRO subscription</a>
     </p>
 </div>
+
+<script type="text/javascript" src="{{ '/assets/js/prism.js?v=' | append: site.github.build_revision | relative_url }}" data-manual></script>
     
 <script>
+    function dateDiffInDays(date1, date2) {
+        var dt1 = new Date(date1);
+        var dt2 = new Date(date2);
+        return Math.floor((Date.UTC(dt2.getFullYear(), dt2.getMonth(), dt2.getDate()) -
+            Date.UTC(dt1.getFullYear(), dt1.getMonth(), dt1.getDate()) ) /(1000 * 60 * 60 * 24));
+    }
+
     function fetchProContent() {
         var product = "{{collection.product}}";
         var article = "{{page.article}}";
@@ -52,28 +58,51 @@
                     throw new Error('Failed fetching article.');
                 })
                 .then(function(html){
-                        window.localStorage.setItem("devsoap.{{collection.product}}.email", email);
-                        window.localStorage.setItem("devsoap.{{collection.product}}.key", key);
-                        window.localStorage.setItem("devsoap.{{collection.product}}.article.{{page.article}}", html);
-                        document.getElementById("article-container").innerHTML = html;
-                        document.getElementById("sponsorship").style.display = 'none';
-                });
+                    window.localStorage.setItem("devsoap.{{collection.product}}.credentials",
+                        JSON.stringify({email: email, key: key, timestamp: new Date()}));
+                    window.localStorage.setItem("devsoap.{{collection.product}}.article.{{page.article}}",
+                        JSON.stringify({content: html.toString(), timestamp: new Date() }));
+                    document.getElementById("article-container").innerHTML = html.toString();
+                    document.getElementById("sponsorship").style.display = 'none';
+                    return document.getElementById("article-container");
+                })
+                .then(function(codeElement) {
+                    codeElement.setAttribute("line-numbers","");
+                    Prism.highlightAllUnder(codeElement);
+                })
         }
     } 
     
-    var storedArticle = window.localStorage.getItem("devsoap.{{collection.product}}.article.{{page.article}}");
-    if(storedArticle != undefined) {
-        document.getElementById("article-container").innerHTML = storedArticle;
+    var storedArticleJson = window.localStorage.getItem("devsoap.{{collection.product}}.article.{{page.article}}");
+    var storedArticle;
+    if(storedArticleJson != undefined) {
+        storedArticle = JSON.parse(storedArticleJson);
+        if(dateDiffInDays(storedArticle.timestamp, new Date()) > 30) {
+            window.localStorage.removeItem("devsoap.{{collection.product}}.article.{{page.article}}");
+            storedArticle = undefined
+        }
+    }
+
+    var credentialsJson = window.localStorage.getItem("devsoap.{{collection.product}}.credentials");
+    var credentials;
+    if(credentialsJson != undefined) {
+        var credentials = JSON.parse(credentialsJson);
+        if(dateDiffInDays(credentials.timestamp, new Date()) > 30) {
+            window.localStorage.removeItem("devsoap.{{collection.product}}.credentials");
+            credentials = undefined
+        } else {
+            document.getElementById("email").value = credentials.email;
+            document.getElementById("key").value = credentials.key;
+        }
+    }
+
+    if(storedArticle != undefined && credentials != undefined){
+        var codeElement = document.getElementById("article-container");
+        codeElement.innerHTML = storedArticle.content;
+        codeElement.setAttribute("line-numbers","");
+        Prism.highlightAllUnder(codeElement);
     } else {
         console.log("Article not found in local storage.");
-        var storedEmail = window.localStorage.getItem("devsoap.{{collection.product}}.email");
-        var storedKey = window.localStorage.getItem("devsoap.{{collection.product}}.key");
-        if (storedEmail != undefined && storedKey != undefined) {
-            document.getElementById("email").value = storedEmail;
-            document.getElementById("key").value = storedKey;
-            fetchProContent();
-        } else {
-            console.log("Credentials not found in local storage. Showing login dialog.");
-        }
+        fetchProContent();
     }
 </script>

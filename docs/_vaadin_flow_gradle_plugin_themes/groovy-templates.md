@@ -2,6 +2,7 @@
 title: Layouts with Groovy HTML Templates
 priority: 4
 modified: '2019-05-29 13:38:38 +0300'
+compatibility_mode: true
 ---
 
 You can also specify your [Polymer templates](polymer-templates.html) using a Groovy DSL. 

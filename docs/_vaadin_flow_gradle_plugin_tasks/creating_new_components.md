@@ -1,7 +1,8 @@
 ---
 title: Creating new Vaadin Flow components
 modified: '2019-05-29 13:38:38 +0300'
-priority: 2
+priority: 3
+compatibility_mode: true
 ---
 
 When you start out with Vaadin Flow you will find that there are plenty of components to chose from even if you are using the basic core components.

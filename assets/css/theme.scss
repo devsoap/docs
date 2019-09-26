@@ -206,11 +206,24 @@ h1,h2,h3,h4,h5,h6,hr {
    }
 }
 
-.pro {
-   background: gold;
-   border: 1px solid gray;
-   border-radius: 0.5em 0.5em 0.5em;
-   font-size: 0.8em;
-   padding: 3px;
-   color: black;
+.tag {
+  border: 1px solid gray;
+  border-radius: 0.5em 0.5em 0.5em;
+  font-size: 0.8em;
+  padding: 3px;
+  float:right;
+  line-height: 1em;
+  margin-right: 10px;
+
+  &.pro {
+    background: #ffd700;
+    color: black;
+  }
+
+  &.compatMode {
+    background: #008672;
+    color: white;
+  }
 }
+
+
