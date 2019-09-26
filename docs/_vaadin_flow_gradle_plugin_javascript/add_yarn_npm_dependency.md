@@ -1,7 +1,7 @@
 ---
 title: Adding a Javascript dependency
-modified: '2019-06-11 19:58:51 +0300'
-compatibility_mode: true
+modified: '2019-09-26 20:33:59 +0300'
+version: V10-V13
 ---
 
 The plugin supports [3 ways of adding a Javascript dependency](/vaadin_flow_gradle_plugin_javascript), 

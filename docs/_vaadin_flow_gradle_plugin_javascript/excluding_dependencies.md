@@ -1,7 +1,7 @@
 ---
 title: Excluding unwanted dependencies
-modified: '2019-06-11 19:58:51 +0300'
-compatibility_mode: true
+modified: '2019-09-26 20:33:59 +0300'
+version: V10-V13
 ---
 
 Due to the varying way client dependencies may be packaged some times the plugin will include too many dependencies,

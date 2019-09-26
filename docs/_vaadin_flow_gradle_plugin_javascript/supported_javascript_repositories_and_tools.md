@@ -1,6 +1,6 @@
 ---
 title: Supported repositories and tools
-modified: '2019-05-29 13:38:38 +0300'
+modified: '2019-09-26 20:33:59 +0300'
 ---
 
 By default all the Vaadin components are distributed as WebJars. WebJars are pre-packaged web components that 
@@ -30,7 +30,7 @@ dependencies you might like are available as WebJars.
 
 ## Yarn (NPM)
 
-Since Vaadin 14 the preferred package manager has been [NPM}(https://www.npmjs.com/). 
+Since Vaadin 14 the preferred package manager has been [NPM](https://www.npmjs.com). 
 
 The plugin uses [Yarn](https://yarnpkg.com/en/) to manage the downloads from the NPM repository as well as perform 
 local mirroring to enable offline mode to work properly.

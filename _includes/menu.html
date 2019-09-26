@@ -21,12 +21,7 @@
                     <li id="{{doc.relative_path}}" class="submenu selected" role="menuitem">
                         <a href="{{ doc.url }}" title="Go to {{ doc.title }}">
                             <span style="float:left">{{ doc.title }}</span>
-                            {% if doc.pro == true %}
-                                <span class="tag pro">PRO</span>
-                            {% endif %}
-                            {% if doc.compatibility_mode == true %}
-                                <span class="tag compatMode">CompatibilityMode</span>
-                            {% endif %}
+                            {% include menu_tags.html %}
                         </a>
                         <ol class="bookmark-list">
                             {% assign lines = doc.content | split: newline  %}
@@ -40,12 +35,7 @@
                     <li id="{{doc.relative_path}}" class="submenu" role="menuitem">
                         <a href="{{ doc.url }}" title="Go to {{ doc.title }}">
                             <span style="float:left">{{ doc.title }}</span>
-                            {% if doc.pro == true %}
-                                <span class="tag pro">PRO</span>
-                            {% endif %}
-                            {% if doc.compatibility_mode == true %}
-                                <span class="tag compatMode">CompatibilityMode</span>
-                            {% endif %}
+                            {% include menu_tags.html %}
                         </a>
                     {% endif %}                       
                     </li>
