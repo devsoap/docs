@@ -216,15 +216,13 @@ h1,h2,h3,h4,h5,h6,hr {
 
 $tag_background: #eee;
 .tag {
-  border: 1px solid gray;
-  border-radius: 0.5em 0.5em 0.5em;
-  font-size: 0.8em;
-  padding: 3px;
+  border: 0;
+  border-radius: 0.3em 0.3em 0.3em;
   float:right;
-  line-height: 1em;
-  margin-right: 10px;
+  margin-left: 2px;
   background-color: $tag_background;
   color: inverse-text-color($tag_background);
+  padding:2px;
 
   &.pro {
     $tag_background: #ffd700;
@@ -245,4 +243,11 @@ $tag_background: #eee;
   }
 }
 
-
+.tag-container {
+   float:right;
+   margin-right:12px;
+   clear: right;
+   margin-top: 4px;
+   line-height: 1em;
+   font-size: 0.8em;
+}

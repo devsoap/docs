@@ -1,7 +1,9 @@
-{% if doc.version %}
-    <span class="tag {{doc.version}}" title="Available only in this version">{{doc.version}}</span>
-{% endif %}
+<span class="tag-container">
+    {% if doc.version %}
+        <span class="tag {{doc.version}}" title="Available only in this version">{{doc.version}}</span>
+    {% endif %}
 
-{% if doc.pro %}
-    <span class="tag pro" title="Only available for PRO subscribers">PRO</span>
-{% endif %}
+    {% if doc.pro %}
+        <span class="tag pro" title="Only available for PRO subscribers">PRO</span>
+    {% endif %}
+</span>
