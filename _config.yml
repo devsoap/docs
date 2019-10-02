@@ -23,8 +23,7 @@ collections:
     title: DS Vaadin Flow Gradle Plugin
     description: A Gradle plugin for developing Vaadin 10+ web applications.
     parent: main
-    logo: https://devsoap.com/content/images/2018/10/Gradle_Vaadin_logo_50x44.png
-    header_image: https://devsoap.com/content/images/2018/09/vaadin_post_header.png
+    logo: https://devsoap.com/assets/graphics/pro-tool-logo.png
     sponsor_link: https://devsoap.com/store/?product=gradle-vaadin-flow
     product: gradle-vaadin-flow
   vaadin_flow_gradle_plugin_dependency_management:
@@ -76,8 +75,7 @@ collections:
     title: DS FN Gradle Plugin
     description: A Gradle plugin for developing Oracle FN functions
     parent: main
-    logo: https://devsoap.com/content/images/2018/10/Gradle_FN_logo_50x44.png
-    header_image: https://devsoap.com/content/images/2018/10/fn-background-sample-2.png
+    logo: https://devsoap.com/assets/graphics/pro-tool-logo.png
     sponsor_link: https://devsoap.com/store/?product=gradle-fn-plugin
   fn_gradle_plugin_tasks:
     output: true
