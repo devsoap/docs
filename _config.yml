@@ -24,6 +24,7 @@ collections:
     description: A Gradle plugin for developing Vaadin 10+ web applications.
     parent: main
     logo: https://devsoap.com/assets/graphics/pro-tool-logo.png
+    header_image: https://devsoap.com/assets/graphics/pro-tool-header.png
     sponsor_link: https://devsoap.com/store/?product=gradle-vaadin-flow
     product: gradle-vaadin-flow
   vaadin_flow_gradle_plugin_dependency_management:
@@ -76,6 +77,7 @@ collections:
     description: A Gradle plugin for developing Oracle FN functions
     parent: main
     logo: https://devsoap.com/assets/graphics/pro-tool-logo.png
+    header_image: https://devsoap.com/assets/graphics/pro-tool-header.png
     sponsor_link: https://devsoap.com/store/?product=gradle-fn-plugin
   fn_gradle_plugin_tasks:
     output: true

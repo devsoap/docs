@@ -2,7 +2,7 @@
     {% assign products = site.collections | where: "parent", 'main' | sort: 'priority' %}
     {% for product in products %}
         <a href="{{product.label}}" class='product-box'>
-            <div class='product-header'></div>
+            <div class='product-header ' style="background-color:#333;background-image: url({{product.header_image}});"></div>
             <span class='product-title'>
                 <img class='product-logo' src='{{product.logo}}'/>
                 <span>{{product.title}}</span>
