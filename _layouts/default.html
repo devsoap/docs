@@ -48,7 +48,7 @@
           <span style="float:right" title="Last modified">{{page.modified | date_to_string: "ordinal", "US" }} </span>
         </div>
 
-        <h1><img src='{{collection.logo}}' style='height:1em' /> {{ title}} </h1>
+        <h1><img src='{{collection.logo}}' style='height:1em; vertical-align: top' /> {{ title}} </h1>
 
         {% if page.pro == true %}
           {% include pro.html %}
