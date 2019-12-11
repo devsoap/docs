@@ -15,6 +15,15 @@ $menu-color: darken($menu-background-color, 50%);
 $menu-selected-color: #26a8ed;
 $menu-item-color: #575757;
 
+
+.site-main.outer {
+   padding:0 !important;
+   min-height:500px;   
+}
+.site-main > .inner {
+   margin: 10px;
+}
+
 aside {
    background: $menu-background-color;
    min-width: 450px;
@@ -93,17 +102,6 @@ aside {
       }      
    }
 
-}
-
-.site-main.outer {
-   padding:0;
-}
-
-.site-main > .inner {
-   padding-top: 1em;
-   padding-left: 20px;
-   padding-right: 20px;
-   text-align: justify;
 }
 
 .last-modifed {

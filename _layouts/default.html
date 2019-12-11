@@ -43,12 +43,20 @@
         </ol>
       </aside>
       <div class="inner">
+        
         <div class="last-modifed">
           <span>{{ collection.title }}</span>
           <span style="float:right" title="Last modified">{{page.modified | date_to_string: "ordinal", "US" }} </span>
         </div>
 
-        <h1><img src='{{collection.logo}}' style='height:1em; vertical-align: top' /> {{ title}} </h1>
+        {% if title != null %}
+          <h1>
+              {% if collection.logo != null %}
+              <img src='{{collection.logo}}' style='height:1em; vertical-align: top' /> 
+              {% endif %}       
+              {{ title}} 
+          </h1>
+        {% endif %}
 
         {% if page.pro == true %}
           {% include pro.html %}
