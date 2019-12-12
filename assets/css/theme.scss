@@ -15,11 +15,6 @@ $menu-color: darken($menu-background-color, 50%);
 $menu-selected-color: #26a8ed;
 $menu-item-color: #575757;
 
-@font-face {
-   font-family: Chango;
-   src: url(assets/fonts/Chango-Regular.ttf);
-}
-
 .site-main.outer {
    padding:0 !important;
    min-height:500px;   
