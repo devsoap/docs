@@ -2,4 +2,4 @@
 layout: javadoc
 ---
 
-<iframe style="width:100%; height:100%" src="groovydoc"></iframe>
+<iframe style="width:100%" src="groovydoc"></iframe>
