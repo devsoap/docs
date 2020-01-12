@@ -1,11 +1,11 @@
 ---
 title: Using Syntactically Awesome Style Sheets (SASS)
-modified: '2019-05-29 13:38:39 +0300'
+modified: '2020-01-12 10:47:56 +0200'
 priority: 2
+version: V10-V13
 ---
 
-For Vaadin 7 and 8 users using [SASS](https://sass-lang.com) was the default way of styling Vaadin applications. This is no longer the case with Vaadin Flow
-but nevertheless, it is still fully possible to use [SASS](https://sass-lang.com) to style the application.
+For Vaadin 7 and 8 users using [SASS](https://sass-lang.com) was the default way of styling Vaadin applications. This is no longer the case with Vaadin Flow but nevertheless, it is still fully possible to use [SASS](https://sass-lang.com) to style the application.
 
 ## A simple example
 
