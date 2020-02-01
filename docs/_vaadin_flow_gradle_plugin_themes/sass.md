@@ -1,6 +1,6 @@
 ---
 title: Using Syntactically Awesome Style Sheets (SASS)
-modified: '2020-01-12 10:47:56 +0200'
+modified: '2020-02-01 09:54:44 +0200'
 priority: 2
 version: V10-V13
 ---
@@ -21,7 +21,7 @@ Before we start we need to first include the {{ site.data.strings["sass_plugin"]
 
 Once that is done then the {{ site.data.strings["sass_plugin"].title }} will take care of converting our [SASS](https://sass-lang.com) into CSS at build time.
 
-Nextr lets look at a trivial example.
+Next lets look at a trivial example.
 
 #### myproject-theme.scss
 ```scss
