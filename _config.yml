@@ -27,6 +27,7 @@ collections:
     header_image: https://devsoap.com/assets/graphics/pro-tool-header.png
     sponsor_link: https://devsoap.com/store/?product=gradle-vaadin-flow
     product: gradle-vaadin-flow
+    opensource: true
   vaadin_flow_gradle_plugin_dependency_management:
     output: true
     title: Dependency Management
@@ -79,6 +80,7 @@ collections:
     logo: https://devsoap.com/assets/graphics/pro-tool-logo.png
     header_image: https://devsoap.com/assets/graphics/pro-tool-header.png
     sponsor_link: https://devsoap.com/store/?product=gradle-fn-plugin
+    opensource: true
   fn_gradle_plugin_tasks:
     output: true
     title: Tasks
@@ -95,7 +97,14 @@ collections:
     parent: fn_gradle_plugin
     priority: 3
     comments: false
-
+  ds_cloud_cache:
+    output: true
+    parent: main
+    title: DS Cloud Cache
+    description: Gradle plugin for distributed build cache
+    logo: https://devsoap.com/assets/graphics/pro-tool-logo.png
+    header_image: https://devsoap.com/assets/graphics/pro-tool-header.png
+    product: gradle-cache-plugin
 defaults:
   - scope:
       path: ""

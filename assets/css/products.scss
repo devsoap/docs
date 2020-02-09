@@ -68,7 +68,7 @@
     color: #eee;
     height: 2em;
 }   
-@media (max-width: 760px) {
+@media (max-width: 1150px) {
     .products { 
         display: block;
     }
@@ -80,7 +80,6 @@
 }
 
 .product-box {
-    margin: 50px auto;
     width: 280px;
     height: 370px;
     background: white;

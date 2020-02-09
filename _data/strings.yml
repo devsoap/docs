@@ -38,3 +38,7 @@ node_plugin:
 fn_plugin:
     version: 0.2
     title: "[DS Vaadin Flow Gradle Plugin](https://devsoap.com/fn-project-gradle-plugin)"
+
+ds_cloud_cache:
+    version: 1.0
+    title: "[DS Cloud Cache Plugin](https://devsoap.com/ds_cloud_cache)"

@@ -10,9 +10,11 @@
             <div class='product-description'>
                 {{product.description}}
             </div>      
+            {% if product.opensource == true %}
             <div class="ribbon-wrapper-green">
                 <div class="ribbon-green">Open Source</div>
             </div>
+            {% endif %}
         </a>
     {% endfor %}
 </div>    
