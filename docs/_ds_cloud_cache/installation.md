@@ -1,5 +1,5 @@
 ---
-modified: '2020-02-09 17:42:06 +0200'
+modified: '2020-02-09 18:18:17 +0200'
 title: Installation
 priority: 1
 ---
@@ -26,6 +26,13 @@ and add the following:
   devsoap {
       email = '...'
       key = '...'
+  }
+
+  // Optional: Disable local build cache
+   buildCache {
+     local {
+         enabled = false
+     }
   }
 ```
 
