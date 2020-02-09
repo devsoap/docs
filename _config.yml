@@ -100,8 +100,8 @@ collections:
   ds_cloud_cache:
     output: true
     parent: main
-    title: DS Cloud Cache
-    description: Gradle plugin for distributed build cache
+    title: DS Gradle Cloud Cache
+    description: Gradle plugin for a distributed build cache
     logo: https://devsoap.com/assets/graphics/pro-tool-logo.png
     header_image: https://devsoap.com/assets/graphics/pro-tool-header.png
     product: gradle-cache-plugin
