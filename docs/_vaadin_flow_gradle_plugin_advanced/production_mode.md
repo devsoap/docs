@@ -1,6 +1,6 @@
 ---
 title: Production Mode
-modified: '2019-09-26 20:33:59 +0300'
+modified: '2020-06-29 10:21:05 +0300'
 version: V10-V13
 ---
 
@@ -10,14 +10,13 @@ To be able to support those browsers, the {{ site.data.strings["vaadin_plugin"].
 Javascript sources of the application to a compatible form so the older browsers can interpret it correctly. This is commonly referred
 to as *transpiling*.
 
-
 ### Enabling production mode
 
 The production mode can either be enabled by setting a property in *build.gradle* or providing the property as an environment variable.
 
 To enable *production mode* via *build.gradle* add the following:
 
-#### build.gradle
+**build.gradle**
 ```groovy
 vaadin {
    productionMode = true
