@@ -39,8 +39,10 @@
 
     {% include footer.html %}
 
+    <img src="https://hits.devsoap.com/hit/docs.png" />    
+        
     <script>
-        analytics();
+        //analytics();
 
         if (window.localStorage.getItem("devsoap.{{collection.product}}.credentials") == undefined) {
             document.getElementById("sponsorship").style.display = 'block';
